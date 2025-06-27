@@ -5,6 +5,7 @@ import PageTitle from "@/components/PageTitle";
 const ProductsPage = async () => {
   const faLang = (await getLang()) === "FA";
   const lang = await getLang();
+
   return (
     <div className="space-y-8">
       <PageTitle lang={lang} titleEn="Our Products" titleFa="محصولات ما" />

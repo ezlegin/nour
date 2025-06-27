@@ -1,51 +1,72 @@
 import Image from "@/components/Image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { dish } from "@/public/products";
+import { getLang } from "@/lib/getLang";
+import { prisma } from "@/prisma/client";
 import Link from "next/link";
 
-const ProductsGrid = () => {
+const ProductsGrid = async () => {
+  const faLang = (await getLang()) === "FA";
+
+  const categories = await prisma.category.findMany();
+
+  const products = await prisma.product.findMany({
+    where: { status: "PUBLISHED" },
+    include: {
+      categories: true,
+      image: true,
+    },
+  });
+
   return (
-    <Tabs defaultValue="round" className="w-full">
-      <TabsList className="w-full bg-transparent gap-10 max-w-sm mx-auto mb-8">
+    <Tabs defaultValue={categories[0]?.name_en} className="w-full">
+      <TabsList
+        dir={faLang ? "rtl" : "ltr"}
+        className="w-full bg-transparent gap-10 max-w-sm mx-auto mb-8"
+      >
         {categories.map((category) => (
-          <TabsTrigger key={category.value} value={category.value}>
-            {category.name}
+          <TabsTrigger key={category.id} value={category.name_en}>
+            {faLang ? category.name_fa : category.name_en}
           </TabsTrigger>
         ))}
       </TabsList>
 
-      <TabsContent value="round">
-        {[1].map((_, idx) => (
-          <div key={idx}>
-            <div className="grid grid-cols-4 gap-4">
-              {Array.from({ length: 15 }).map((_, idx) => (
-                <Link href={"/products/1"} key={idx}>
-                  <div className="bg-muted rounded-md aspect-square text-muted-foreground flex items-center justify-center">
-                    <Image
-                      alt={`Photo ${idx + 1}`}
-                      src={dish}
-                      size={400}
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
-      </TabsContent>
-      <TabsContent value="itali">Itali</TabsContent>
-      <TabsContent value="new">New</TabsContent>
-      <TabsContent value="random">Random Products</TabsContent>
+      {categories.map((category) => {
+        const categoryProducts = products.filter((product) =>
+          product.categories.some((cat) => cat.categoryId === category.id)
+        );
+
+        return (
+          <TabsContent key={category.id} value={category.name_en}>
+            {categoryProducts.length > 0 ? (
+              <div
+                dir={faLang ? "rtl" : "ltr"}
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+              >
+                {categoryProducts.map((product) => (
+                  <Link href={`/products/${product.url}`} key={product.id}>
+                    <div className="bg-muted rounded-md aspect-square text-muted-foreground flex items-center justify-center overflow-hidden">
+                      <Image
+                        alt={product.title_en}
+                        src={product.image?.url} // fallback if no image
+                        size={400}
+                        className="rounded-md object-cover w-full h-full"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-muted-foreground mt-4">
+                {faLang
+                  ? "محصولی در این دسته وجود ندارد."
+                  : "No products in this category."}
+              </p>
+            )}
+          </TabsContent>
+        );
+      })}
     </Tabs>
   );
 };
-
-const categories = [
-  { value: "round", name: "Round Shaped" },
-  { value: "itali", name: "Itali Shaped" },
-  { value: "new", name: "New Shaped" },
-  { value: "random", name: "Random Products" },
-];
 
 export default ProductsGrid;
