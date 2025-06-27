@@ -1,5 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import { getLang } from "@/lib/getLang";
+import { Metadata } from "next";
 
 const ContactPage = async () => {
   const faLang = (await getLang()) === "FA";
@@ -23,3 +24,8 @@ const ContactPage = async () => {
 };
 
 export default ContactPage;
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with us for any inquiries or support.",
+};

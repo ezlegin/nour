@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 
 export default function RootLayout({
   children,
@@ -17,11 +16,3 @@ export default function RootLayout({
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: "Nour Porcelain",
-  description: "Nour Porcelain",
-  icons: {
-    icon: "/favicon.svg",
-  },
-};

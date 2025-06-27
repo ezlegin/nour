@@ -2,7 +2,6 @@ const PageTitle = ({
   titleFa,
   titleEn,
   lang,
-  className,
 }: {
   titleFa: string;
   titleEn: string;

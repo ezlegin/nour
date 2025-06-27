@@ -29,3 +29,9 @@ const ProductsPage = async () => {
 };
 
 export default ProductsPage;
+
+export const metadata = {
+  title: "Products",
+  description:
+    "Explore our collection of elegant and colorful porcelain dinnerware, designed to enhance your dining experience with timeless simplicity.",
+};

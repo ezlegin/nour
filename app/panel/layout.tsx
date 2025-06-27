@@ -12,3 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </SidebarProvider>
   );
 }
+
+export const metadata = {
+  title: "Admin Panel",
+};

@@ -21,7 +21,7 @@ const page = async ({ params }: Props) => {
       qualifications: true,
       categories: {
         include: {
-          category: true, // assuming categories is a many-to-many relation with a 'category' model
+          category: true,
         },
       },
       image: true,
@@ -32,7 +32,9 @@ const page = async ({ params }: Props) => {
 
   return (
     <div>
-      <ProductBreadCrumb productTitle="31-Piecse itali Shaped Service" />
+      <ProductBreadCrumb
+        productTitle={faLang ? product.title_fa : product.title_en}
+      />
 
       <div className="space-y-10">
         <div className="flex gap-10 mt-4">
@@ -84,3 +86,18 @@ const page = async ({ params }: Props) => {
 };
 
 export default page;
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+
+  const product = await prisma.product.findUnique({
+    where: { url: slug },
+  });
+
+  if (!product) return {};
+
+  return {
+    title: product.title_en,
+    description: product.description_en,
+  };
+}
