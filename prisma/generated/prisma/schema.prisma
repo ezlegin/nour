@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -26,7 +26,7 @@ model Product {
   status         ProductStatus
   url            String        @unique
 
-  image          Image?            @relation("ProductImage", fields: [imageId], references: [id])
+  image          Image?
   imageId        Int?              @unique
   galleryImages  ProductGallery[]
   categories     ProductCategory[]
@@ -47,10 +47,12 @@ model Image {
   width     Int?
   height    Int?
   format    String?
+  size      Int
   createdAt DateTime @default(now())
 
-  product Product?         @relation("ProductImage")
-  gallery ProductGallery[]
+  product   Product?         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId Int?             @unique
+  gallery   ProductGallery[]
 }
 
 model ProductGallery {

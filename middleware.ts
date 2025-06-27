@@ -10,7 +10,7 @@ export async function middleware(req: NextRequest) {
   )?.value;
   const isLoggedIn = !!token;
 
-  const isPrivateRoute = ["/panel"].some((route) =>
+  const isPrivateRoute = ["/xpanel"].some((route) =>
     nextUrl.pathname.startsWith(route)
   );
   const isAuthRoute = ["/login"].some((route) =>

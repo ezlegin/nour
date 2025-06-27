@@ -149,7 +149,9 @@ exports.Prisma.ImageScalarFieldEnum = {
   width: 'width',
   height: 'height',
   format: 'format',
-  createdAt: 'createdAt'
+  size: 'size',
+  createdAt: 'createdAt',
+  productId: 'productId'
 };
 
 exports.Prisma.ProductGalleryScalarFieldEnum = {
@@ -183,14 +185,41 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
+exports.Prisma.AdminOrderByRelevanceFieldEnum = {
+  name: 'name',
+  email: 'email',
+  password: 'password'
 };
 
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
+};
+
+exports.Prisma.ProductOrderByRelevanceFieldEnum = {
+  title_en: 'title_en',
+  title_fa: 'title_fa',
+  description_en: 'description_en',
+  description_fa: 'description_fa',
+  url: 'url'
+};
+
+exports.Prisma.ImageOrderByRelevanceFieldEnum = {
+  url: 'url',
+  public_id: 'public_id',
+  format: 'format'
+};
+
+exports.Prisma.CategoryOrderByRelevanceFieldEnum = {
+  name_en: 'name_en',
+  name_fa: 'name_fa'
+};
+
+exports.Prisma.QualificationOrderByRelevanceFieldEnum = {
+  metric_en: 'metric_en',
+  metric_fa: 'metric_fa',
+  value_en: 'value_en',
+  value_fa: 'value_fa'
 };
 exports.ProductStatus = exports.$Enums.ProductStatus = {
   PUBLISHED: 'PUBLISHED',

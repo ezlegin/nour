@@ -1,13 +1,14 @@
 import { getLang } from "@/lib/getLang";
 import ProductsGrid from "./components/ProductsGrid";
+import PageTitle from "@/components/PageTitle";
 
 const ProductsPage = async () => {
   const faLang = (await getLang()) === "FA";
+  const lang = await getLang();
   return (
     <div className="space-y-8">
-      <h1 className="text-4xl font-bold text-center">
-        {faLang ? "محصولات ما" : "Our Products"}
-      </h1>
+      <PageTitle lang={lang} titleEn="Our Products" titleFa="محصولات ما" />
+
       <p className="text-center text-muted-foreground">
         {faLang
           ? "مجموعه‌ای از ظروف پرسلین شیک و رنگارنگ ما را کشف کنید."

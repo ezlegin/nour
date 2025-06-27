@@ -31,6 +31,7 @@ const renderRows = (category: Category) => {
   return (
     <TableRow key={category.id} className="odd:bg-muted">
       <TableCell className="text-left">{category.name_en}</TableCell>
+      <TableCell className="text-left">{category.name_fa}</TableCell>
 
       <TableCell className="flex justify-end">
         <Dialog>
@@ -50,7 +51,8 @@ const renderRows = (category: Category) => {
 };
 
 const columns = [
-  { label: "Name", className: "" },
+  { label: "Name En", className: "" },
+  { label: "Name Fa", className: "" },
   {
     label: "Actions",
     className: "text-right w-[60px]",

@@ -2,6 +2,8 @@
 
 import { ProductFormType } from "@/lib/validationSchema";
 import { prisma } from "@/prisma/client";
+import { deleteCloudFile, uploadCloudFile } from "./cloudinary";
+import { UploadApiResponse } from "cloudinary";
 
 export const createProduct = async (data: ProductFormType) => {
   const {
@@ -13,6 +15,7 @@ export const createProduct = async (data: ProductFormType) => {
     titleEN,
     titleFA,
     url,
+    image,
   } = data;
 
   try {
@@ -52,6 +55,34 @@ export const createProduct = async (data: ProductFormType) => {
       },
     });
 
+    if (image && image instanceof File) {
+      const buffer = Buffer.from(await image.arrayBuffer());
+
+      const { secure_url, public_id, format, bytes } = (await uploadCloudFile(
+        buffer,
+        {
+          folder: "post",
+          resource_type: "image",
+          width: 800,
+        }
+      )) as UploadApiResponse;
+
+      // CREATE IMAGE
+      await prisma.image.create({
+        data: {
+          url: secure_url,
+          public_id,
+          format,
+          size: bytes,
+          product: {
+            connect: {
+              id: newProduct.id,
+            },
+          },
+        },
+      });
+    }
+
     return {
       success: "Product Created Successfully.",
       productId: newProduct.id,
@@ -75,6 +106,7 @@ export const updateProduct = async (
     titleEN,
     titleFA,
     url,
+    image,
   } = data;
 
   const cleanedUrl = url.trim().replace(/\s+/g, "-").toLowerCase();
@@ -121,7 +153,44 @@ export const updateProduct = async (
           })),
         },
       },
+
+      include: { image: true },
     });
+
+    if (image && image instanceof File) {
+      const buffer = Buffer.from(await image.arrayBuffer());
+      const { secure_url, public_id, format, bytes } = (await uploadCloudFile(
+        buffer,
+        {
+          folder: "post",
+          resource_type: "image",
+          width: 800,
+        }
+      )) as UploadApiResponse;
+
+      if (updatedProduct.image) {
+        await deleteCloudFile(updatedProduct.image.public_id);
+      }
+
+      await prisma.image.upsert({
+        where: { productId: updatedProduct.id },
+        update: {
+          url: secure_url,
+          public_id,
+          format,
+          size: bytes,
+        },
+        create: {
+          url: secure_url,
+          public_id,
+          format,
+          size: bytes,
+          product: {
+            connect: { id: updatedProduct.id },
+          },
+        },
+      });
+    }
 
     return {
       success: "Product updated successfully.",
