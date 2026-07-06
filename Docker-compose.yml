@@ -1,0 +1,88 @@
+# version: "3.8"
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    restart: always
+    environment:
+      CLIENT_MAX_BODY_SIZE: 10m
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:rw
+      - vhost.d:/etc/nginx/vhost.d:rw
+      - html:/usr/share/nginx/html:rw
+    networks:
+      - app_network
+
+  nginx-letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: nginx-letsencrypt
+    restart: always
+    environment:
+      NGINX_PROXY_CONTAINER: nginx-proxy
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - certs:/etc/nginx/certs:rw
+      - vhost.d:/etc/nginx/vhost.d:rw
+      - html:/usr/share/nginx/html:rw
+    networks:
+      - app_network
+
+  database:
+    image: mysql:8.0.32
+    container_name: database
+    platform: linux/amd64
+    restart: always
+    environment:
+      DATABASE_URL: mysql://root@database:3306/nour
+      MYSQL_DATABASE: nour
+      MYSQL_ALLOW_EMPTY_PASSWORD: "1"
+    volumes:
+      - database:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+    networks:
+      - app_network
+
+  app:
+    build:
+      context: .
+      dockerfile: ./apps/app/Dockerfile
+      args:
+        DATABASE_URL: ${DATABASE_URL}
+        NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        RESEND_API_KEY: ${RESEND_API_KEY}
+    container_name: app
+    restart: always
+    env_file:
+      - /root/envs/nour/app.env.local
+    environment:
+      VIRTUAL_PORT: 3000
+      VIRTUAL_HOST: chininour.ir
+      LETSENCRYPT_HOST: chininour.ir
+      LETSENCRYPT_EMAIL: admin@chininour.ir
+      NEXTAUTH_URL: https://chininour.ir
+      CLIENT_MAX_BODY_SIZE: 10m
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - app_network
+
+volumes:
+  database:
+  certs:
+  vhost.d:
+  html:
+
+networks:
+  app_network:
+    external: true

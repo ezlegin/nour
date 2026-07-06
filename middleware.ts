@@ -6,15 +6,15 @@ export async function middleware(req: NextRequest) {
   const token = cookies.get(
     process.env.NODE_ENV === "development"
       ? "authjs.session-token"
-      : "__Secure-authjs.session-token"
+      : "__Secure-authjs.session-token",
   )?.value;
   const isLoggedIn = !!token;
 
-  const isPrivateRoute = ["/xpanel"].some((route) =>
-    nextUrl.pathname.startsWith(route)
+  const isPrivateRoute = ["/panel"].some((route) =>
+    nextUrl.pathname.startsWith(route),
   );
   const isAuthRoute = ["/login"].some((route) =>
-    nextUrl.pathname.startsWith(route)
+    nextUrl.pathname.startsWith(route),
   );
 
   if (!isLoggedIn && isPrivateRoute && !isAuthRoute) {
@@ -22,7 +22,7 @@ export async function middleware(req: NextRequest) {
   }
 
   if (isLoggedIn && isAuthRoute) {
-    return NextResponse.redirect(new URL("/panel", nextUrl));
+    return NextResponse.redirect(new URL("/panel/products", nextUrl));
   }
 
   return NextResponse.next();

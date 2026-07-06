@@ -3554,16 +3554,12 @@ export namespace Prisma {
 
   export type ImageAvgAggregateOutputType = {
     id: number | null
-    width: number | null
-    height: number | null
     size: number | null
     productId: number | null
   }
 
   export type ImageSumAggregateOutputType = {
     id: number | null
-    width: number | null
-    height: number | null
     size: number | null
     productId: number | null
   }
@@ -3572,8 +3568,6 @@ export namespace Prisma {
     id: number | null
     url: string | null
     public_id: string | null
-    width: number | null
-    height: number | null
     format: string | null
     size: number | null
     createdAt: Date | null
@@ -3584,8 +3578,6 @@ export namespace Prisma {
     id: number | null
     url: string | null
     public_id: string | null
-    width: number | null
-    height: number | null
     format: string | null
     size: number | null
     createdAt: Date | null
@@ -3596,8 +3588,6 @@ export namespace Prisma {
     id: number
     url: number
     public_id: number
-    width: number
-    height: number
     format: number
     size: number
     createdAt: number
@@ -3608,16 +3598,12 @@ export namespace Prisma {
 
   export type ImageAvgAggregateInputType = {
     id?: true
-    width?: true
-    height?: true
     size?: true
     productId?: true
   }
 
   export type ImageSumAggregateInputType = {
     id?: true
-    width?: true
-    height?: true
     size?: true
     productId?: true
   }
@@ -3626,8 +3612,6 @@ export namespace Prisma {
     id?: true
     url?: true
     public_id?: true
-    width?: true
-    height?: true
     format?: true
     size?: true
     createdAt?: true
@@ -3638,8 +3622,6 @@ export namespace Prisma {
     id?: true
     url?: true
     public_id?: true
-    width?: true
-    height?: true
     format?: true
     size?: true
     createdAt?: true
@@ -3650,8 +3632,6 @@ export namespace Prisma {
     id?: true
     url?: true
     public_id?: true
-    width?: true
-    height?: true
     format?: true
     size?: true
     createdAt?: true
@@ -3749,8 +3729,6 @@ export namespace Prisma {
     id: number
     url: string
     public_id: string
-    width: number | null
-    height: number | null
     format: string | null
     size: number
     createdAt: Date
@@ -3780,8 +3758,6 @@ export namespace Prisma {
     id?: boolean
     url?: boolean
     public_id?: boolean
-    width?: boolean
-    height?: boolean
     format?: boolean
     size?: boolean
     createdAt?: boolean
@@ -3797,15 +3773,13 @@ export namespace Prisma {
     id?: boolean
     url?: boolean
     public_id?: boolean
-    width?: boolean
-    height?: boolean
     format?: boolean
     size?: boolean
     createdAt?: boolean
     productId?: boolean
   }
 
-  export type ImageOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "url" | "public_id" | "width" | "height" | "format" | "size" | "createdAt" | "productId", ExtArgs["result"]["image"]>
+  export type ImageOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "url" | "public_id" | "format" | "size" | "createdAt" | "productId", ExtArgs["result"]["image"]>
   export type ImageInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     product?: boolean | Image$productArgs<ExtArgs>
     gallery?: boolean | Image$galleryArgs<ExtArgs>
@@ -3822,8 +3796,6 @@ export namespace Prisma {
       id: number
       url: string
       public_id: string
-      width: number | null
-      height: number | null
       format: string | null
       size: number
       createdAt: Date
@@ -4202,8 +4174,6 @@ export namespace Prisma {
     readonly id: FieldRef<"Image", 'Int'>
     readonly url: FieldRef<"Image", 'String'>
     readonly public_id: FieldRef<"Image", 'String'>
-    readonly width: FieldRef<"Image", 'Int'>
-    readonly height: FieldRef<"Image", 'Int'>
     readonly format: FieldRef<"Image", 'String'>
     readonly size: FieldRef<"Image", 'Int'>
     readonly createdAt: FieldRef<"Image", 'DateTime'>
@@ -8494,8 +8464,6 @@ export namespace Prisma {
     id: 'id',
     url: 'url',
     public_id: 'public_id',
-    width: 'width',
-    height: 'height',
     format: 'format',
     size: 'size',
     createdAt: 'createdAt',
@@ -8808,8 +8776,6 @@ export namespace Prisma {
     id?: IntFilter<"Image"> | number
     url?: StringFilter<"Image"> | string
     public_id?: StringFilter<"Image"> | string
-    width?: IntNullableFilter<"Image"> | number | null
-    height?: IntNullableFilter<"Image"> | number | null
     format?: StringNullableFilter<"Image"> | string | null
     size?: IntFilter<"Image"> | number
     createdAt?: DateTimeFilter<"Image"> | Date | string
@@ -8822,8 +8788,6 @@ export namespace Prisma {
     id?: SortOrder
     url?: SortOrder
     public_id?: SortOrder
-    width?: SortOrderInput | SortOrder
-    height?: SortOrderInput | SortOrder
     format?: SortOrderInput | SortOrder
     size?: SortOrder
     createdAt?: SortOrder
@@ -8841,8 +8805,6 @@ export namespace Prisma {
     OR?: ImageWhereInput[]
     NOT?: ImageWhereInput | ImageWhereInput[]
     url?: StringFilter<"Image"> | string
-    width?: IntNullableFilter<"Image"> | number | null
-    height?: IntNullableFilter<"Image"> | number | null
     format?: StringNullableFilter<"Image"> | string | null
     size?: IntFilter<"Image"> | number
     createdAt?: DateTimeFilter<"Image"> | Date | string
@@ -8854,8 +8816,6 @@ export namespace Prisma {
     id?: SortOrder
     url?: SortOrder
     public_id?: SortOrder
-    width?: SortOrderInput | SortOrder
-    height?: SortOrderInput | SortOrder
     format?: SortOrderInput | SortOrder
     size?: SortOrder
     createdAt?: SortOrder
@@ -8874,8 +8834,6 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Image"> | number
     url?: StringWithAggregatesFilter<"Image"> | string
     public_id?: StringWithAggregatesFilter<"Image"> | string
-    width?: IntNullableWithAggregatesFilter<"Image"> | number | null
-    height?: IntNullableWithAggregatesFilter<"Image"> | number | null
     format?: StringNullableWithAggregatesFilter<"Image"> | string | null
     size?: IntWithAggregatesFilter<"Image"> | number
     createdAt?: DateTimeWithAggregatesFilter<"Image"> | Date | string
@@ -9256,8 +9214,6 @@ export namespace Prisma {
   export type ImageCreateInput = {
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -9269,8 +9225,6 @@ export namespace Prisma {
     id?: number
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -9281,8 +9235,6 @@ export namespace Prisma {
   export type ImageUpdateInput = {
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -9294,8 +9246,6 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -9307,8 +9257,6 @@ export namespace Prisma {
     id?: number
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -9318,8 +9266,6 @@ export namespace Prisma {
   export type ImageUpdateManyMutationInput = {
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -9329,8 +9275,6 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -9806,8 +9750,6 @@ export namespace Prisma {
     id?: SortOrder
     url?: SortOrder
     public_id?: SortOrder
-    width?: SortOrder
-    height?: SortOrder
     format?: SortOrder
     size?: SortOrder
     createdAt?: SortOrder
@@ -9816,8 +9758,6 @@ export namespace Prisma {
 
   export type ImageAvgOrderByAggregateInput = {
     id?: SortOrder
-    width?: SortOrder
-    height?: SortOrder
     size?: SortOrder
     productId?: SortOrder
   }
@@ -9826,8 +9766,6 @@ export namespace Prisma {
     id?: SortOrder
     url?: SortOrder
     public_id?: SortOrder
-    width?: SortOrder
-    height?: SortOrder
     format?: SortOrder
     size?: SortOrder
     createdAt?: SortOrder
@@ -9838,8 +9776,6 @@ export namespace Prisma {
     id?: SortOrder
     url?: SortOrder
     public_id?: SortOrder
-    width?: SortOrder
-    height?: SortOrder
     format?: SortOrder
     size?: SortOrder
     createdAt?: SortOrder
@@ -9848,8 +9784,6 @@ export namespace Prisma {
 
   export type ImageSumOrderByAggregateInput = {
     id?: SortOrder
-    width?: SortOrder
-    height?: SortOrder
     size?: SortOrder
     productId?: SortOrder
   }
@@ -10569,8 +10503,6 @@ export namespace Prisma {
   export type ImageCreateWithoutProductInput = {
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -10581,8 +10513,6 @@ export namespace Prisma {
     id?: number
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -10670,8 +10600,6 @@ export namespace Prisma {
   export type ImageUpdateWithoutProductInput = {
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -10682,8 +10610,6 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -10919,8 +10845,6 @@ export namespace Prisma {
   export type ImageCreateWithoutGalleryInput = {
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -10931,8 +10855,6 @@ export namespace Prisma {
     id?: number
     url: string
     public_id: string
-    width?: number | null
-    height?: number | null
     format?: string | null
     size: number
     createdAt?: Date | string
@@ -11000,8 +10922,6 @@ export namespace Prisma {
   export type ImageUpdateWithoutGalleryInput = {
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -11012,8 +10932,6 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     url?: StringFieldUpdateOperationsInput | string
     public_id?: StringFieldUpdateOperationsInput | string
-    width?: NullableIntFieldUpdateOperationsInput | number | null
-    height?: NullableIntFieldUpdateOperationsInput | number | null
     format?: NullableStringFieldUpdateOperationsInput | string | null
     size?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string

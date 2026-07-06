@@ -28,7 +28,7 @@ const page = async ({ searchParams }: Props) => {
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center">
-        <h3>Categories</h3>
+        <h3 className="text-2xl font-semibold">Categories</h3>
         <div className="flex gap-3 justify-between items-center">
           <Dialog>
             <DialogTrigger asChild>

@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const ViewButton = ({ href }: { href?: string }) => {
   return (
-    <Link href={href || ""}>
+    <Link href={href || ""} target="_blank">
       <Button
         size={"icon"}
         variant={"secondary"}

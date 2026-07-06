@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  createCategory,
-  deleteCategory,
-  updateCategory,
-} from "@/actions/category";
+import { createAdmin, deleteAdmin, updateAdmin } from "@/actions/admin";
 import DeleteButton from "@/components/DeleteButton";
 import Loader from "@/components/Loader";
 import { Button } from "@/components/ui/button";
@@ -18,40 +14,38 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useLoading } from "@/hooks/useLoading";
-import { categoryFormSchema, CategoryFormType } from "@/lib/validationSchema";
-import { Category } from "@/prisma/generated/prisma";
+import { adminFormSchema, AdminFormType } from "@/lib/validationSchema";
+import { Admin } from "@/prisma/generated/prisma";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 interface Props {
-  type: "NEW" | "UPDATE";
-  category?: Category;
+  admin?: Admin;
 }
 
-const CategoryForm = ({ type, category }: Props) => {
+const AdminForm = ({ admin }: Props) => {
   // HOOKS
   const { loading, setLoading } = useLoading();
   const router = useRouter();
 
-  const isUpdateType = type === "UPDATE";
-
-  const form = useForm<CategoryFormType>({
-    resolver: zodResolver(categoryFormSchema),
+  const form = useForm<AdminFormType>({
+    resolver: zodResolver(adminFormSchema),
     mode: "onSubmit",
     defaultValues: {
-      nameEN: category?.name_en || "",
-      nameFA: category?.name_fa || "",
+      email: admin?.email ?? "",
+      fullName: admin?.name ?? "",
+      password: "",
     },
   });
 
-  const onSubmit = async (data: CategoryFormType) => {
+  const onSubmit = async (data: AdminFormType) => {
     setLoading(true);
 
-    const res = isUpdateType
-      ? await updateCategory(data, category?.id!)
-      : await createCategory(data);
+    const res = admin
+      ? await updateAdmin(data, admin?.id!)
+      : await createAdmin(data);
 
     if (res.error) {
       toast.error(res.error);
@@ -67,7 +61,7 @@ const CategoryForm = ({ type, category }: Props) => {
   };
 
   const onDelete = async () => {
-    const res = await deleteCategory(category?.id!);
+    const res = await deleteAdmin(admin?.id!);
 
     if (res.error) {
       toast.error(res.error);
@@ -76,7 +70,7 @@ const CategoryForm = ({ type, category }: Props) => {
 
     if (res.success) {
       toast.success(res.success);
-      router.push("/panel/categories");
+      router.push("/panel/admins");
       router.refresh();
     }
   };
@@ -90,10 +84,10 @@ const CategoryForm = ({ type, category }: Props) => {
       >
         <FormField
           control={form.control}
-          name="nameEN"
+          name="fullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name (EN)</FormLabel>
+              <FormLabel>Full Name</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -104,12 +98,26 @@ const CategoryForm = ({ type, category }: Props) => {
 
         <FormField
           control={form.control}
-          name="nameFA"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name (FA)</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input {...field} type="password" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -122,13 +130,13 @@ const CategoryForm = ({ type, category }: Props) => {
           type="submit"
         >
           <Loader loading={loading} />
-          {isUpdateType ? "Update" : "Create"}
+          {admin ? "Update" : "Create"}
         </Button>
 
-        {isUpdateType && <DeleteButton onDelete={onDelete} />}
+        {admin && <DeleteButton onDelete={onDelete} />}
       </form>
     </Form>
   );
 };
 
-export default CategoryForm;
+export default AdminForm;

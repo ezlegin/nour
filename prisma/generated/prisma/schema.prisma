@@ -44,8 +44,6 @@ model Image {
   id        Int      @id @default(autoincrement())
   url       String
   public_id String   @unique
-  width     Int?
-  height    Int?
   format    String?
   size      Int
   createdAt DateTime @default(now())

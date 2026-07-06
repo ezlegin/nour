@@ -1,10 +1,4 @@
-import {
-  ChartNoAxesGantt,
-  Home,
-  LogOut,
-  ScanBarcode,
-  User,
-} from "lucide-react";
+import { ChartNoAxesGantt, ScanBarcode, User, Users } from "lucide-react";
 
 import {
   Sidebar,
@@ -18,10 +12,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { getSessionAdmin } from "@/data/admin";
 import Link from "next/link";
 import NourTypoLogo from "./NourTypoLogo";
 import { Button } from "./ui/button";
-import { getSessionAdmin } from "@/data/admin";
 
 export async function AppSidebar() {
   const admin = await getSessionAdmin();
@@ -58,22 +52,13 @@ export async function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4">
-        <Button variant={"secondary"}>
-          <LogOut /> Log Out
-        </Button>
-      </SidebarFooter>
+      <SidebarFooter className="p-4">{/* <LogoutButton /> */}</SidebarFooter>
     </Sidebar>
   );
 }
 
 // Menu items.
 const items = [
-  {
-    title: "Home",
-    url: "/panel",
-    icon: Home,
-  },
   {
     title: "Products",
     url: "/panel/products",
@@ -83,5 +68,10 @@ const items = [
     title: "Categories",
     url: "/panel/categories",
     icon: ChartNoAxesGantt,
+  },
+  {
+    title: "Admins",
+    url: "/panel/admins",
+    icon: Users,
   },
 ];

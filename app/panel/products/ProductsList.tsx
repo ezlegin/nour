@@ -4,6 +4,11 @@ import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import { Badge } from "@/components/ui/badge";
 import { TableCell, TableRow } from "@/components/ui/table";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import ViewButton from "@/components/ViewButton";
 import {
   Category,
@@ -60,7 +65,12 @@ const renderRows = (product: ProductType) => {
             size={50}
             className="rounded-sm aspect-square object-cover hidden lg:block bg-muted"
           />
-          <span dir="rtl">{product.title_en}</span>
+          <span dir="rtl">
+            <Tooltip>
+              <TooltipTrigger>{product.title_en}</TooltipTrigger>
+              <TooltipContent>{product.title_fa}</TooltipContent>
+            </Tooltip>
+          </span>
         </Link>
       </TableCell>
       <TableCell className="text-center hidden xl:table-cell">
@@ -87,7 +97,7 @@ const renderRows = (product: ProductType) => {
       <TableCell className="lg:flex gap-2 hidden ">
         <EditButton href={`/panel/products/${product.id}`} />
         <ViewButton
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}/${product?.url}`}
+          href={`${process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_BASE_URL : "http://localhost:3000"}/products/${product?.url}`}
         />
       </TableCell>
     </TableRow>

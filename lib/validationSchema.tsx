@@ -10,9 +10,17 @@ export const status = ["1", "0"] as const;
 //! LOGIN FORM
 export const loginFormSchema = z.object({
   email: z.string().email({ message: "Invalid email" }),
-  password: z.string().min(8, { message: "Required" }),
+  password: z.string().min(8),
 });
 export type LoginFormType = z.infer<typeof loginFormSchema>;
+
+//! Admin
+export const adminFormSchema = z.object({
+  fullName: z.string(),
+  email: z.string().email({ message: "Invalid email" }),
+  password: z.string().min(8).optional(),
+});
+export type AdminFormType = z.infer<typeof adminFormSchema>;
 
 //! POSTS
 export const productFormSchema = z.object({
@@ -30,7 +38,7 @@ export const productFormSchema = z.object({
       metricFA: z.string().min(1),
       valueEN: z.string().min(1),
       valueFA: z.string().min(1),
-    })
+    }),
   ),
 });
 export type ProductFormType = z.infer<typeof productFormSchema>;
