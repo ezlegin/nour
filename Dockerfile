@@ -1,35 +1,58 @@
-# Install dependencies only when needed
-FROM node:20-alpine AS deps
-WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm install --frozen-lockfile
+# -----------------------------
+# Dependencies
+# -----------------------------
+FROM node:22-alpine AS deps
 
-# Rebuild the source code only when needed
-FROM node:20-alpine AS builder
 WORKDIR /app
+
+# Required for Prisma on Alpine
+RUN apk add --no-cache libc6-compat openssl
+
+COPY package*.json ./
+RUN npm ci
+
+# -----------------------------
+# Builder
+# -----------------------------
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+RUN apk add --no-cache libc6-compat openssl
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+# Generate Prisma Client
+RUN npx prisma generate
+
+# Build Next.js
 RUN npm run build
 
-# Production image
-FROM node:20-alpine AS runner
+# -----------------------------
+# Production
+# -----------------------------
+FROM node:22-alpine AS runner
+
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
+ENV PORT=3000
 
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
+RUN apk add --no-cache libc6-compat openssl
+
+# Create non-root user
+RUN addgroup -S nodejs && adduser -S nextjs -G nodejs
+
+COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/prisma ./prisma
+COPY --from=builder /app/next.config.* ./
+
+USER nextjs
 
 EXPOSE 3000
-
-RUN echo "✅ Database is up. Running Prisma migration..."
-RUN npx prisma migrate deploy --schema=prisma/schema.prisma
-
-RUN echo "🔧 Generating Prisma client..."
-RUN npx prisma generate --schema=prisma/schema.prisma
-
-RUN echo "🚀 Starting app..."
 
 CMD ["npm", "start"]
