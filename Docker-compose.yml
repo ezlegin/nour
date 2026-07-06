@@ -64,8 +64,8 @@ services:
       - /root/envs/nour/app.env.local
     environment:
       VIRTUAL_PORT: 3000
-      VIRTUAL_HOST: chininour.com
-      LETSENCRYPT_HOST: chininour.com
+      VIRTUAL_HOST: chininour.com,chininour.ir
+      LETSENCRYPT_HOST: chininour.com,chininour.ir
       LETSENCRYPT_EMAIL: admin@chininour.com
       NEXTAUTH_URL: https://chininour.com
       CLIENT_MAX_BODY_SIZE: 10m
