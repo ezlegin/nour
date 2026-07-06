@@ -69,6 +69,9 @@ export const deleteAdmin = async (id: number) => {
     const existingAdmin = await prisma.admin.findFirst({ where: { id } });
     if (!existingAdmin) throw new Error("Admin not found.");
 
+    if (existingAdmin.email === "ezlegini.ir@gmail.com")
+      throw new Error("Sorry, But You can't Delete Main Admin.");
+
     await prisma.admin.delete({ where: { id } });
 
     return { success: "Admin Deleted Successfully." };

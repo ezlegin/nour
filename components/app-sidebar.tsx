@@ -16,6 +16,7 @@ import { getSessionAdmin } from "@/data/admin";
 import Link from "next/link";
 import NourTypoLogo from "./NourTypoLogo";
 import { Button } from "./ui/button";
+import LogoutButton from "./LogoutButton";
 
 export async function AppSidebar() {
   const admin = await getSessionAdmin();
@@ -52,7 +53,9 @@ export async function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4">{/* <LogoutButton /> */}</SidebarFooter>
+      <SidebarFooter className="p-4">
+        <LogoutButton />
+      </SidebarFooter>
     </Sidebar>
   );
 }

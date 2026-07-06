@@ -1,13 +1,9 @@
-import Link from "next/link";
-import NourLogo from "./NourLogo";
-import { Button } from "./ui/button";
-import { getSessionAdmin } from "@/data/admin";
-import { User } from "lucide-react";
-import LangToggle from "./LangToggle";
 import { getLang } from "@/lib/getLang";
+import Link from "next/link";
+import LangToggle from "./LangToggle";
+import NourLogo from "./NourLogo";
 
 const NavBar = async () => {
-  const admin = await getSessionAdmin();
   const faLang = (await getLang()) === "FA";
 
   return (
@@ -28,22 +24,6 @@ const NavBar = async () => {
         </ul>
 
         <LangToggle />
-
-        {admin ? (
-          <Link href={"/panel"}>
-            <Button variant={"outline"}>
-              <User />
-              {admin.name}
-            </Button>
-          </Link>
-        ) : (
-          <Link href={"/panel"}>
-            <Button>
-              <User />
-              {faLang ? "ورود" : "Login"}
-            </Button>
-          </Link>
-        )}
       </div>
     </div>
   );

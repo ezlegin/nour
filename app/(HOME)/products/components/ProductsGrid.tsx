@@ -17,6 +17,13 @@ const ProductsGrid = async () => {
     },
   });
 
+  if (products.length === 0)
+    return (
+      <div className="text-xs text-muted-foreground" dir="ltr">
+        No Products Yet...
+      </div>
+    );
+
   return (
     <Tabs defaultValue={categories[0]?.name_en} className="w-full">
       <TabsList
@@ -32,7 +39,7 @@ const ProductsGrid = async () => {
 
       {categories.map((category) => {
         const categoryProducts = products.filter((product) =>
-          product.categories.some((cat) => cat.categoryId === category.id)
+          product.categories.some((cat) => cat.categoryId === category.id),
         );
 
         return (

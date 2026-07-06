@@ -1,11 +1,10 @@
 import Image from "@/components/Image";
-import ImageDialog from "@/components/ImageDialog";
 import { Badge } from "@/components/ui/badge";
-import ProductBreadCrumb from "./components/ProductBreadCrumb";
-import Qualifications from "./components/Qualifications";
+import { getLang } from "@/lib/getLang";
 import { prisma } from "@/prisma/client";
 import { notFound } from "next/navigation";
-import { getLang } from "@/lib/getLang";
+import ProductBreadCrumb from "./components/ProductBreadCrumb";
+import Qualifications from "./components/Qualifications";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -77,7 +76,8 @@ const page = async ({ params }: Props) => {
 
         <div className="space-y-3">
           <div className="grid grid-cols-5 gap-4">
-            <ImageDialog images={["", "", ""]} />
+            {faLang ? "تصاویر" : "Images"}
+            {/* <ImageDialog images={["", "", ""]} /> */}
           </div>
         </div>
       </div>

@@ -10,16 +10,16 @@ export async function middleware(req: NextRequest) {
   )?.value;
   const isLoggedIn = !!token;
 
-  const isPrivateRoute = ["/panel"].some((route) =>
-    nextUrl.pathname.startsWith(route),
-  );
+  // const isPrivateRoute = ["/panel"].some((route) =>
+  //   nextUrl.pathname.startsWith(route),
+  // );
   const isAuthRoute = ["/login"].some((route) =>
     nextUrl.pathname.startsWith(route),
   );
 
-  if (!isLoggedIn && isPrivateRoute && !isAuthRoute) {
-    return NextResponse.redirect(new URL("/login", nextUrl));
-  }
+  // if (!isLoggedIn && isPrivateRoute && !isAuthRoute) {
+  //   return NextResponse.redirect(new URL("/login", nextUrl));
+  // }
 
   if (isLoggedIn && isAuthRoute) {
     return NextResponse.redirect(new URL("/panel/products", nextUrl));

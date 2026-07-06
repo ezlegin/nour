@@ -37,15 +37,15 @@ export interface ProductType extends Product {
 }
 
 interface Props {
-  product: ProductType[];
+  products: ProductType[];
   totalProducts: number;
   pageSize: number;
 }
 
-const ProductsList = async ({ product, totalProducts, pageSize }: Props) => {
+const ProductsList = async ({ products, totalProducts, pageSize }: Props) => {
   return (
     <div className="card">
-      <Table columns={columns} data={product} renderRows={renderRows} />
+      <Table columns={columns} data={products} renderRows={renderRows} />
       <Pagination pageSize={pageSize} totalItems={totalProducts} />
     </div>
   );
