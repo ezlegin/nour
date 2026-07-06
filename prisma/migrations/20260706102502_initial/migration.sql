@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `Admin` (
+CREATE TABLE `admin` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(191) NOT NULL,
     `email` VARCHAR(191) NOT NULL,
@@ -7,12 +7,12 @@ CREATE TABLE `Admin` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `Admin_email_key`(`email`),
+    UNIQUE INDEX `admin_email_key`(`email`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Product` (
+CREATE TABLE `product` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `title_en` VARCHAR(191) NOT NULL,
     `title_fa` VARCHAR(191) NOT NULL,
@@ -24,27 +24,28 @@ CREATE TABLE `Product` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `Product_url_key`(`url`),
-    UNIQUE INDEX `Product_imageId_key`(`imageId`),
+    UNIQUE INDEX `product_url_key`(`url`),
+    UNIQUE INDEX `product_imageId_key`(`imageId`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Image` (
+CREATE TABLE `image` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `url` VARCHAR(191) NOT NULL,
     `public_id` VARCHAR(191) NOT NULL,
-    `width` INTEGER NULL,
-    `height` INTEGER NULL,
     `format` VARCHAR(191) NULL,
+    `size` INTEGER NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `productId` INTEGER NULL,
 
-    UNIQUE INDEX `Image_public_id_key`(`public_id`),
+    UNIQUE INDEX `image_public_id_key`(`public_id`),
+    UNIQUE INDEX `image_productId_key`(`productId`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `ProductGallery` (
+CREATE TABLE `productgallery` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `productId` INTEGER NOT NULL,
     `imageId` INTEGER NOT NULL,
@@ -53,18 +54,18 @@ CREATE TABLE `ProductGallery` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Category` (
+CREATE TABLE `category` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `name_en` VARCHAR(191) NOT NULL,
     `name_fa` VARCHAR(191) NOT NULL,
 
-    UNIQUE INDEX `Category_name_en_key`(`name_en`),
-    UNIQUE INDEX `Category_name_fa_key`(`name_fa`),
+    UNIQUE INDEX `category_name_en_key`(`name_en`),
+    UNIQUE INDEX `category_name_fa_key`(`name_fa`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `ProductCategory` (
+CREATE TABLE `productcategory` (
     `productId` INTEGER NOT NULL,
     `categoryId` INTEGER NOT NULL,
 
@@ -72,7 +73,7 @@ CREATE TABLE `ProductCategory` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Qualification` (
+CREATE TABLE `qualification` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `metric_en` VARCHAR(191) NOT NULL,
     `metric_fa` VARCHAR(191) NOT NULL,
@@ -84,19 +85,19 @@ CREATE TABLE `Qualification` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Product` ADD CONSTRAINT `Product_imageId_fkey` FOREIGN KEY (`imageId`) REFERENCES `Image`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `image` ADD CONSTRAINT `image_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `ProductGallery` ADD CONSTRAINT `ProductGallery_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `Product`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `productgallery` ADD CONSTRAINT `productgallery_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `product`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `ProductGallery` ADD CONSTRAINT `ProductGallery_imageId_fkey` FOREIGN KEY (`imageId`) REFERENCES `Image`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `productgallery` ADD CONSTRAINT `productgallery_imageId_fkey` FOREIGN KEY (`imageId`) REFERENCES `image`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `ProductCategory` ADD CONSTRAINT `ProductCategory_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `Product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `productcategory` ADD CONSTRAINT `productcategory_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `ProductCategory` ADD CONSTRAINT `ProductCategory_categoryId_fkey` FOREIGN KEY (`categoryId`) REFERENCES `Category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `productcategory` ADD CONSTRAINT `productcategory_categoryId_fkey` FOREIGN KEY (`categoryId`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Qualification` ADD CONSTRAINT `Qualification_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `Product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `qualification` ADD CONSTRAINT `qualification_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;

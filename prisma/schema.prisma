@@ -1,6 +1,7 @@
 generator client {
-  provider = "prisma-client-js"
-  output   = "./generated/prisma"
+  provider      = "prisma-client-js"
+  output        = "./generated/prisma"
+  binaryTargets = ["native", "linux-musl"]
 }
 
 datasource db {
@@ -15,6 +16,8 @@ model Admin {
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("admin")
 }
 
 model Product {
@@ -33,6 +36,8 @@ model Product {
   qualifications Qualification[]
   createdAt      DateTime          @default(now())
   updatedAt      DateTime          @updatedAt
+
+  @@map("product")
 }
 
 enum ProductStatus {
@@ -51,6 +56,8 @@ model Image {
   product   Product?         @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId Int?             @unique
   gallery   ProductGallery[]
+
+  @@map("image")
 }
 
 model ProductGallery {
@@ -59,6 +66,8 @@ model ProductGallery {
   productId Int
   image     Image   @relation(fields: [imageId], references: [id])
   imageId   Int
+
+  @@map("productgallery")
 }
 
 model Category {
@@ -66,6 +75,8 @@ model Category {
   name_en  String            @unique
   name_fa  String            @unique
   products ProductCategory[]
+
+  @@map("category")
 }
 
 model ProductCategory {
@@ -75,6 +86,7 @@ model ProductCategory {
   categoryId Int
 
   @@id([productId, categoryId])
+  @@map("productcategory")
 }
 
 model Qualification {
@@ -85,4 +97,6 @@ model Qualification {
   value_fa  String
   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId Int
+
+  @@map("qualification")
 }
