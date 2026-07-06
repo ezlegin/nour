@@ -55,7 +55,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./apps/app/Dockerfile
+      dockerfile: ./Dockerfile
       args:
         DATABASE_URL: ${DATABASE_URL}
     container_name: app
