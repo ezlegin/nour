@@ -24,4 +24,12 @@ COPY --from=builder /app/package.json ./package.json
 
 EXPOSE 3000
 
+RUN echo "✅ Database is up. Running Prisma migration..."
+RUN npx prisma migrate deploy --schema=prisma/schema.prisma
+
+RUN echo "🔧 Generating Prisma client..."
+RUN npx prisma generate --schema=prisma/schema.prisma
+
+RUN echo "🚀 Starting app..."
+
 CMD ["npm", "start"]
