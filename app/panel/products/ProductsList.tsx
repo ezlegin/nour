@@ -67,7 +67,7 @@ const renderRows = (product: ProductType) => {
           />
           <span dir="rtl">
             <Tooltip>
-              <TooltipTrigger>{product.title_en}</TooltipTrigger>
+              <TooltipTrigger dir="ltr">{product.title_en}</TooltipTrigger>
               <TooltipContent>{product.title_fa}</TooltipContent>
             </Tooltip>
           </span>
