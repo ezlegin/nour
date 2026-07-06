@@ -51,7 +51,10 @@ const ProductsGrid = async () => {
               >
                 {categoryProducts.map((product) => (
                   <Link href={`/products/${product.url}`} key={product.id}>
-                    <div className="bg-muted rounded-md aspect-square text-muted-foreground flex items-center justify-center overflow-hidden">
+                    <div
+                      title={faLang ? product.title_fa : product.title_en}
+                      className="bg-muted rounded-md aspect-square text-muted-foreground flex items-center justify-center overflow-hidden"
+                    >
                       <Image
                         alt={product.title_en}
                         src={product.image?.url} // fallback if no image

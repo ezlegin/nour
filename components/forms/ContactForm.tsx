@@ -43,45 +43,6 @@ const ContactForm = ({ faLang }: Props) => {
 
   return (
     <div className="flex flex-col md:flex-row gap-20">
-      <div className="w-full md:w-1/2 space-y-4">
-        <h2 className="text-xl font-bold">
-          {faLang ? "اطلاعات تماس" : "Contact Info"}
-        </h2>
-        <p className="text-muted-foreground">
-          {faLang
-            ? "اگر سوال یا درخواستی دارید، لطفاً بدون تردید از طریق اطلاعات زیر با ما در ارتباط باشید."
-            : `If you have any questions or inquiries, please feel free to reach out
-          to us using the information below.`}
-        </p>
-
-        <hr />
-
-        <p>
-          <strong>{faLang ? "ایمیل:" : "Email:"}</strong> info@chininour.com
-        </p>
-        <p>
-          <strong>{faLang ? "تماس:" : "Phone:"}</strong>{" "}
-          <span dir="ltr">+98 24 3575 2007</span>
-        </p>
-        <p>
-          <strong>{faLang ? "آدرس:" : "Address:"}</strong>
-          {faLang
-            ? `کیلومتر 15 جاده ابهر، زنجان، شرکت چینی نور`
-            : `15th km of
-          Abhar-Zanjan Road, Zanjan, Iran`}
-        </p>
-
-        <div className="bg-muted h-60 rounded-md flex justify-center items-center overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11199.229938825567!2d49.118832487596706!3d36.28479292776235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff44159b7e74f07%3A0x15010387753119a7!2sNour%20Chini!5e0!3m2!1sen!2s!4v1751037875046!5m2!1sen!2s"
-            width="100%"
-            height="100%"
-            className="border:0;"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
       <div className="w-full md:w-1/2">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
