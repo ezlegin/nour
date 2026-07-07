@@ -31,22 +31,24 @@ const NavBar = async () => {
 
         <LangToggle />
 
-        <Popover>
-          <PopoverTrigger className="cursor-pointer">
-            <Menu />
-          </PopoverTrigger>
-          <PopoverContent className="space-y-4 w-40">
-            {(faLang ? menuItemsFA : menuItemsEN).map((item, idx) => (
-              <Link
-                key={idx}
-                className="hover:text-foreground/80 block"
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </PopoverContent>
-        </Popover>
+        <div className="block md:hidden">
+          <Popover>
+            <PopoverTrigger className="cursor-pointer ">
+              <Menu />
+            </PopoverTrigger>
+            <PopoverContent className="space-y-4 w-40">
+              {(faLang ? menuItemsFA : menuItemsEN).map((item, idx) => (
+                <Link
+                  key={idx}
+                  className="hover:text-foreground/80 block"
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </PopoverContent>
+          </Popover>
+        </div>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const InputForm = () => {
 
     const res = await authenticator(data.email, data.password);
 
-    if (res?.error) {
+    if (res.error) {
       toast.error(res.error);
       setLoading(false);
       return;
@@ -46,7 +46,7 @@ const InputForm = () => {
 
     if (res.success) {
       toast.success("Login successful");
-      router.refresh();
+      router.push("/panel");
     }
   };
 

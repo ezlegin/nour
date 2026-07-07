@@ -12,11 +12,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { getSessionAdmin } from "@/data/admin";
 import Link from "next/link";
 import NourTypoLogo from "./NourTypoLogo";
 import { Button } from "./ui/button";
 import LogoutButton from "./LogoutButton";
+import { getSessionAdmin } from "@/data/session";
 
 export async function AppSidebar() {
   const admin = await getSessionAdmin();
