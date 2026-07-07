@@ -35,23 +35,31 @@ const page = async ({ params }: Props) => {
         productTitle={faLang ? product.title_fa : product.title_en}
       />
 
-      <div className="space-y-10">
-        <div className="flex gap-10 mt-4">
-          <div className="w-1/2">
+      <div className="mt-4 space-y-8 lg:space-y-10">
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">
+          {/* Image */}
+          <div className="w-full lg:w-1/2">
             <Image
               alt="pic"
               src={product.image?.url}
               size={650}
-              className="rounded-md aspect-square w-full"
+              className="aspect-square w-full rounded-md object-cover"
             />
           </div>
-          <div className="space-y-5 w-1/2">
-            {product.categories.map((category, idx) => (
-              <Badge key={idx} className="text-sm">
-                {faLang ? category.category.name_fa : category.category.name_en}
-              </Badge>
-            ))}
-            <h1 className="text-2xl font-bold">
+
+          {/* Details */}
+          <div className="w-full space-y-5 lg:w-1/2">
+            <div className="flex flex-wrap gap-2">
+              {product.categories.map((category, idx) => (
+                <Badge key={idx} className="text-sm">
+                  {faLang
+                    ? category.category.name_fa
+                    : category.category.name_en}
+                </Badge>
+              ))}
+            </div>
+
+            <h1 className="text-2xl font-bold lg:text-3xl">
               {faLang ? product.title_fa : product.title_en}
             </h1>
 
@@ -64,7 +72,8 @@ const page = async ({ params }: Props) => {
                 <h2 className="text-lg font-semibold">
                   {faLang ? "توضیحات" : "Description"}
                 </h2>
-                <p className="text-muted-foreground pl-3">
+
+                <p className="text-muted-foreground leading-7 lg:pl-3">
                   {faLang ? product.description_fa : product.description_en}
                 </p>
               </div>
@@ -75,8 +84,11 @@ const page = async ({ params }: Props) => {
         <hr />
 
         <div className="space-y-3">
-          <div className="grid grid-cols-5 gap-4">
+          <h2 className="text-lg font-semibold">
             {faLang ? "تصاویر" : "Images"}
+          </h2>
+
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
             {/* <ImageDialog images={["", "", ""]} /> */}
           </div>
         </div>

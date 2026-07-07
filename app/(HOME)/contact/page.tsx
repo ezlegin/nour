@@ -5,11 +5,11 @@ const ContactPage = async () => {
   const faLang = (await getLang()) === "FA";
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-8 text-center">
       <h1 className="text-4xl font-bold text-center">
         {faLang ? "ارتباط با ما" : "Contact Us"}
       </h1>
-      <p className="text-center text-muted-foreground">
+      <p className="text-muted-foreground">
         {faLang
           ? `سوالی دارید یا نیاز به راهنمایی دارید؟
 پیام خود را برای ما بفرستید، در کوتاه‌ترین زمان پاسخ‌گو خواهیم بود.`
@@ -30,7 +30,7 @@ const ContactPage = async () => {
 
         <hr />
 
-        <div className="text-center">
+        <div>
           <p>
             <strong>{faLang ? "ایمیل:" : "Email:"}</strong> info@chininour.com
           </p>

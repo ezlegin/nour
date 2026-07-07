@@ -28,7 +28,7 @@ const ProductsGrid = async () => {
     <Tabs defaultValue={categories[0]?.name_en} className="w-full">
       <TabsList
         dir={faLang ? "rtl" : "ltr"}
-        className="w-full bg-transparent gap-10 max-w-sm mx-auto mb-8"
+        className="w-full bg-transparent gap-3 md:gap-6 max-w-sm mx-auto mb-8"
       >
         {categories.map((category) => (
           <TabsTrigger key={category.id} value={category.name_en}>

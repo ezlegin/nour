@@ -1,4 +1,10 @@
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { getLang } from "@/lib/getLang";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import LangToggle from "./LangToggle";
 import NourLogo from "./NourLogo";
@@ -12,8 +18,8 @@ const NavBar = async () => {
         <NourLogo />
       </Link>
 
-      <div className="flex items-center gap-12">
-        <ul className="flex gap-12">
+      <div className="flex items-center gap-3 md:gap-12 ">
+        <ul className="md:flex gap-12 hidden">
           {(faLang ? menuItemsFA : menuItemsEN).map((item, idx) => (
             <li key={idx}>
               <Link className="hover:text-foreground/80" href={item.href}>
@@ -24,6 +30,23 @@ const NavBar = async () => {
         </ul>
 
         <LangToggle />
+
+        <Popover>
+          <PopoverTrigger className="cursor-pointer">
+            <Menu />
+          </PopoverTrigger>
+          <PopoverContent className="space-y-4 w-40">
+            {(faLang ? menuItemsFA : menuItemsEN).map((item, idx) => (
+              <Link
+                key={idx}
+                className="hover:text-foreground/80 block"
+                href={item.href}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </PopoverContent>
+        </Popover>
       </div>
     </div>
   );

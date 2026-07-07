@@ -8,7 +8,7 @@ const page = async () => {
   const lang = await getLang();
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 text-center">
       <PageTitle lang={lang} titleEn="About Us" titleFa="درباره ما" />
 
       {faLang ? (
