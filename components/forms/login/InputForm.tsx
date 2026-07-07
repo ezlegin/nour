@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { useLoading } from "@/hooks/useLoading";
 import { LoginFormType, loginFormSchema } from "@/lib/validationSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -31,8 +31,10 @@ const InputForm = () => {
     },
   });
 
+  const router = useRouter();
+
   const onSubmit = async (data: LoginFormType) => {
-    // setLoading(true);
+    setLoading(true);
 
     const res = await authenticator(data.email, data.password);
 
@@ -43,13 +45,9 @@ const InputForm = () => {
     }
 
     if (res.success) {
-      setLoading(false);
       toast.success("Login successful");
-      redirect("/panel");
+      router.refresh();
     }
-
-    toast.success("Login successful");
-    redirect("/panel");
   };
 
   return (

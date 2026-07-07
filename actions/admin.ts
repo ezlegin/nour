@@ -4,6 +4,8 @@ import { AdminFormType } from "@/lib/validationSchema";
 import { prisma } from "@/prisma/client";
 import bcrypt from "bcrypt";
 
+const mainAdminEmail = "ezlegini.ir@gmail.com";
+
 export const createAdmin = async (data: AdminFormType) => {
   const { email, fullName, password } = data;
   try {
@@ -33,6 +35,9 @@ export const updateAdmin = async (data: AdminFormType, id: number) => {
   try {
     const existingAdmin = await prisma.admin.findFirst({ where: { email } });
     if (!existingAdmin) throw new Error("Admin Not Found.");
+
+    if (existingAdmin.email === mainAdminEmail)
+      throw new Error("Sorry, But You can't Update Main Admin.");
 
     const existingAdminByEmail = await prisma.admin.findFirst({
       where: { email, id: { not: id } },
@@ -69,7 +74,7 @@ export const deleteAdmin = async (id: number) => {
     const existingAdmin = await prisma.admin.findFirst({ where: { id } });
     if (!existingAdmin) throw new Error("Admin not found.");
 
-    if (existingAdmin.email === "ezlegini.ir@gmail.com")
+    if (existingAdmin.email === mainAdminEmail)
       throw new Error("Sorry, But You can't Delete Main Admin.");
 
     await prisma.admin.delete({ where: { id } });
