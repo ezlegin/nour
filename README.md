@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# چینی نور — chininour.com
 
-## Getting Started
+The website of Nour Porcelain (Zanjan). A fully static Next.js site: no
+database, no admin panel, no server code. Everything it shows lives in the
+repository.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # static export into ./out
+npm run preview    # serve ./out locally
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | Where |
+| --- | --- |
+| Products, prices (white / coloured), gold-edge surcharge | `data/showcase.ts` |
+| Which 3D model each product uses | `lib/models.ts` |
+| The eight glazes | `lib/glazes.ts` |
+| 3D models (`.glb`) | `public/models/` |
+| Factory photo | `public/factory/` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Prices in `data/showcase.ts` are placeholders until the real price list is in.
 
-## Learn More
+## Contact form
 
-To learn more about Next.js, take a look at the following resources:
+Messages are sent by [Web3Forms](https://web3forms.com) to info@chininour.com.
+The access key is read at build time from:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_WEB3FORMS_KEY=...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set it in `.env` locally and in the Vercel project's Environment Variables.
+Without it the form falls back to opening the visitor's email app.
 
-## Deploy on Vercel
+## Deploying (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Import the GitHub repository in Vercel. The Next.js preset is detected;
+   no build settings need changing (`vercel.json` sets caching headers).
+2. Add `NEXT_PUBLIC_WEB3FORMS_KEY` under Settings → Environment Variables
+   (Production and Preview), then redeploy.
+3. Add `chininour.com` and `www.chininour.com` under Settings → Domains and
+   point the DNS records Vercel shows at your domain registrar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Every push to `main` deploys to production.

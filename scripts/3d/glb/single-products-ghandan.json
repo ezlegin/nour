@@ -1,0 +1,49 @@
+{
+ "slug": "single-products-ghandan",
+ "source": "Single Products\\Ghandan.blend",
+ "glb": "single-products-ghandan.glb",
+ "bytes": 1566884,
+ "polys": 49920,
+ "objects": [
+  "Circle",
+  "Sphere.015",
+  "Sphere.001"
+ ],
+ "size_m": [
+  0.1131,
+  0.1131,
+  0.4563
+ ],
+ "bbox_min": [
+  -0.05657042935490608,
+  -0.05657042935490608,
+  0.0
+ ],
+ "bbox_max": [
+  0.05657042935490608,
+  0.05657042935490608,
+  0.45626163482666016
+ ],
+ "materials": {
+  "Glaze": {
+   "hex": "#C4BCB3",
+   "roughness": 0.15,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#D88E8E",
+   "roughness": 0.18,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Cylinder.002",
+   "hidden"
+  ],
+  [
+   "Camera",
+   "camera"
+  ]
+ ]
+}

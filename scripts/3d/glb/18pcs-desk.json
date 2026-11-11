@@ -1,0 +1,126 @@
+{
+ "slug": "18pcs-desk",
+ "source": "18PCS Desk.blend",
+ "glb": "18pcs-desk.glb",
+ "bytes": 1979264,
+ "polys": 109995,
+ "objects": [
+  "Sphere.015",
+  "Sphere.014",
+  "CUP",
+  "Circle.002",
+  "Circle.001",
+  "Cylinder.007",
+  "NAALBAKI",
+  "Cylinder.001"
+ ],
+ "size_m": [
+  0.2781,
+  0.3939,
+  0.1754
+ ],
+ "bbox_min": [
+  -0.08730421960353851,
+  -0.19502609968185425,
+  -0.005001374054700136
+ ],
+ "bbox_max": [
+  0.19081264734268188,
+  0.19887511432170868,
+  0.17037071287631989
+ ],
+ "materials": {
+  "Gray.002": {
+   "hex": "#646467",
+   "roughness": 0.03,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#D67A7A",
+   "roughness": 0.03,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ],
+  [
+   "Cylinder.002",
+   "hidden"
+  ],
+  [
+   "Circle",
+   "backdrop"
+  ],
+  [
+   "Cube",
+   "backdrop"
+  ],
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Area",
+   "light"
+  ],
+  [
+   "Area.001",
+   "light"
+  ],
+  [
+   "Area.002",
+   "light"
+  ]
+ ]
+}

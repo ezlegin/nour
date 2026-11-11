@@ -1,0 +1,95 @@
+{
+ "slug": "single-products-ball-saltshaker",
+ "source": "Single Products\\Ball Saltshaker.blend",
+ "glb": "single-products-ball-saltshaker.glb",
+ "bytes": 155404,
+ "polys": 6144,
+ "objects": [
+  "Sphere.001",
+  "Sphere.002",
+  "Sphere.003",
+  "Sphere.004",
+  "Sphere.005",
+  "Sphere.006",
+  "Sphere.007",
+  "Sphere.008",
+  "Sphere.009",
+  "Sphere.010",
+  "Sphere.011",
+  "Sphere.012"
+ ],
+ "size_m": [
+  1.0423,
+  0.8748,
+  0.1614
+ ],
+ "bbox_min": [
+  -0.8926743865013123,
+  -1.3660359382629395,
+  -0.08072401583194733
+ ],
+ "bbox_max": [
+  0.14966431260108948,
+  -0.49118736386299133,
+  0.08072493970394135
+ ],
+ "materials": {
+  "Blue": {
+   "hex": "#58969E",
+   "roughness": 0.4,
+   "metallic": 0.0
+  },
+  "Coffe": {
+   "hex": "#8B886E",
+   "roughness": 0.3,
+   "metallic": 0.0
+  },
+  "Dark Blue": {
+   "hex": "#1E3138",
+   "roughness": 0.4,
+   "metallic": 0.0
+  },
+  "Dark Brown": {
+   "hex": "#120F0C",
+   "roughness": 0.5,
+   "metallic": 0.0
+  },
+  "Gray-Blue": {
+   "hex": "#1C2226",
+   "roughness": 0.5,
+   "metallic": 0.0
+  },
+  "Gray.001": {
+   "hex": "#979797",
+   "roughness": 0.03,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#A66363",
+   "roughness": 0.3,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Cube",
+   "hidden"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Area.001",
+   "light"
+  ],
+  [
+   "Area.002",
+   "light"
+  ]
+ ]
+}

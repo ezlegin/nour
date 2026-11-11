@@ -1,0 +1,156 @@
+{
+ "slug": "33-pcs-gray",
+ "source": "33 PCS Gray.blend",
+ "glb": "33-pcs-gray.glb",
+ "bytes": 1974816,
+ "polys": 109990,
+ "objects": [
+  "Salt Shaker 0",
+  "CUP",
+  "Cylinder.007",
+  "Circle.002",
+  "NAALBAKI",
+  "Circle.003",
+  "Circle.004",
+  "Circle",
+  "Circle.005",
+  "Circle.006"
+ ],
+ "size_m": [
+  0.5055,
+  0.6292,
+  0.302
+ ],
+ "bbox_min": [
+  -0.2538890242576599,
+  -0.26434290409088135,
+  -0.006103535648435354
+ ],
+ "bbox_max": [
+  0.25157880783081055,
+  0.3648437261581421,
+  0.29594236612319946
+ ],
+ "materials": {
+  "BlueGlow.001": {
+   "hex": "#89B9D3",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Brown": {
+   "hex": "#6D5037",
+   "roughness": 0.191,
+   "metallic": 0.0
+  },
+  "BrownPLANE": {
+   "hex": "#191100",
+   "roughness": 0.191,
+   "metallic": 0.0
+  },
+  "Coffe.001": {
+   "hex": "#A78F77",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Gray.002": {
+   "hex": "#757579",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Green.001": {
+   "hex": "#85BEA9",
+   "roughness": 0.082,
+   "metallic": 0.0
+  },
+  "Light Coffe.001": {
+   "hex": "#DCC9A3",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Orange.001": {
+   "hex": "#DF8069",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#D88E8E",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Yellow.001": {
+   "hex": "#DCD256",
+   "roughness": 0.18,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Plane",
+   "backdrop"
+  ],
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Cylinder",
+   "hidden"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ]
+ ]
+}

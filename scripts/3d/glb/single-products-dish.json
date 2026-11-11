@@ -1,0 +1,83 @@
+{
+ "slug": "single-products-dish",
+ "source": "Single Products\\Dish.blend",
+ "glb": "single-products-dish.glb",
+ "bytes": 1975164,
+ "polys": 109998,
+ "objects": [
+  "CUP",
+  "NAALBAKI"
+ ],
+ "size_m": [
+  0.1461,
+  0.1448,
+  0.0649
+ ],
+ "bbox_min": [
+  -0.07051295787096024,
+  -0.07051295787096024,
+  -0.0007692135404795408
+ ],
+ "bbox_max": [
+  0.07554401457309723,
+  0.07428587973117828,
+  0.0641322135925293
+ ],
+ "materials": {
+  "Gray Material.007": {
+   "hex": "#7F495D",
+   "roughness": 0.14,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ]
+ ]
+}

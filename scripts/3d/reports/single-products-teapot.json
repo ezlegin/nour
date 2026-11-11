@@ -1,0 +1,313 @@
+{
+ "file": "C:\\Users\\Alireza Ezlegini\\Desktop\\_Apps\\nour\\3D\\Single Products\\TEapot.blend",
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "Camera",
+   "type": "CAMERA",
+   "parent": null,
+   "dim_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    -0.3924,
+    0.0393
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ]
+  },
+  {
+   "name": "Cylinder",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    15.76,
+    15.76,
+    8.0
+   ],
+   "loc": [
+    0.6,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 224,
+   "polys": 193,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    21.59,
+    14.15,
+    8.92
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0154
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ],
+   "verts": 406,
+   "polys": 368,
+   "mats": [
+    "Material.001"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    15.76,
+    15.76,
+    8.0
+   ],
+   "loc": [
+    0.4184,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 288,
+   "polys": 257,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.003",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    15.76,
+    15.76,
+    8.0
+   ],
+   "loc": [
+    0.2093,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 320,
+   "polys": 289,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.004",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    15.8,
+    15.8,
+    8.0
+   ],
+   "loc": [
+    0.0362,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 320,
+   "polys": 289,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.005",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    17.87,
+    15.8,
+    8.0
+   ],
+   "loc": [
+    -0.1807,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 662,
+   "polys": 628,
+   "mats": [],
+   "modifiers": [
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.006",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    21.06,
+    15.8,
+    8.42
+   ],
+   "loc": [
+    -0.4145,
+    0.8406,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Backups"
+   ],
+   "verts": 339,
+   "polys": 304,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Sphere.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    7.2,
+    7.2,
+    2.17
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0222
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ],
+   "verts": 707,
+   "polys": 769,
+   "mats": [
+    "Material.001"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF",
+    "SMOOTH"
+   ]
+  },
+  {
+   "name": "Sun",
+   "type": "LIGHT",
+   "parent": null,
+   "dim_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    1.1076
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ]
+  }
+ ],
+ "materials": {
+  "Dots Stroke": {
+   "use_nodes": false,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [],
+   "hex": "#E7E7E7"
+  },
+  "Material.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.4984,
+      0.2989,
+      0.0695,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.2,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#BB954B"
+  }
+ },
+ "collections": [
+  "Backups",
+  "Collection"
+ ],
+ "images": [
+  "interior.exr"
+ ],
+ "rel": "Single Products\\TEapot.blend",
+ "slug": "single-products-teapot"
+}

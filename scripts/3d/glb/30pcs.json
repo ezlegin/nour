@@ -1,0 +1,167 @@
+{
+ "slug": "30pcs",
+ "source": "30PCS.blend",
+ "glb": "30pcs.glb",
+ "bytes": 1981516,
+ "polys": 109992,
+ "objects": [
+  "Salt Shaker 0",
+  "CUP",
+  "Cylinder.007",
+  "Circle.002",
+  "NAALBAKI",
+  "Circle.003",
+  "Circle.004",
+  "Circle",
+  "Circle.005",
+  "Circle.006"
+ ],
+ "size_m": [
+  0.5105,
+  0.6296,
+  0.302
+ ],
+ "bbox_min": [
+  -0.2538890242576599,
+  -0.2647281885147095,
+  -0.0060158222913742065
+ ],
+ "bbox_max": [
+  0.2566162645816803,
+  0.3648437261581421,
+  0.29594236612319946
+ ],
+ "materials": {
+  "Light Coffe": {
+   "hex": "#DCC9A3",
+   "roughness": 0.0,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Area.001",
+   "light"
+  ],
+  [
+   "Area.002",
+   "light"
+  ],
+  [
+   "Sun",
+   "light"
+  ],
+  [
+   "Cylinder.001",
+   "hidden"
+  ],
+  [
+   "Cylinder",
+   "hidden"
+  ],
+  [
+   "Sphere",
+   "hidden"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ],
+  [
+   "Sphere.013",
+   "swatch"
+  ],
+  [
+   "Sphere.014",
+   "swatch"
+  ],
+  [
+   "Cylinder.002",
+   "hidden"
+  ],
+  [
+   "Cube",
+   "hidden"
+  ],
+  [
+   "Cylinder.008",
+   "hidden"
+  ],
+  [
+   "Cylinder.009",
+   "hidden"
+  ],
+  [
+   "Cylinder.010",
+   "hidden"
+  ],
+  [
+   "Cylinder.011",
+   "hidden"
+  ],
+  [
+   "Cylinder.012",
+   "hidden"
+  ],
+  [
+   "Cylinder.013",
+   "hidden"
+  ],
+  [
+   "Cylinder.003",
+   "hidden"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ]
+ ]
+}

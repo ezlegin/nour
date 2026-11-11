@@ -1,0 +1,850 @@
+{
+ "file": "C:\\Users\\Alireza Ezlegini\\Desktop\\_Apps\\nour\\3D\\Single Products\\Salad Bowl.blend",
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "Camera",
+   "type": "CAMERA",
+   "parent": null,
+   "dim_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.4915,
+    -0.0171,
+    0.2811
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "Circle",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    23.5,
+    23.5,
+    7.14
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ],
+   "verts": 224,
+   "polys": 193,
+   "mats": [
+    "White.001"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Plane.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    226.77,
+    226.77,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 4,
+   "polys": 1,
+   "mats": [
+    "BrownPLANE"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Plane.003",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    226.77,
+    226.77,
+    0.0
+   ],
+   "loc": [
+    -0.3423,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 4,
+   "polys": 1,
+   "mats": [
+    "BrownPLANE"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.2276,
+    -0.6145,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "BlueGlow.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.1562,
+    -0.6145,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "BlueMat.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.0709,
+    -0.6145,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "BrownPLANE"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.003",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.2276,
+    -0.7096,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Coffe.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.004",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.1562,
+    -0.7096,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Gray.002"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.005",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.0709,
+    -0.7096,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Green.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.006",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.2276,
+    -0.8259,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Light Coffe.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.007",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.1562,
+    -0.8259,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Orange.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.008",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.0709,
+    -0.8259,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Pink"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.009",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.2276,
+    -0.9357,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Yellow.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.010",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.1562,
+    -0.9357,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "White.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.011",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.0709,
+    -0.9357,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Pink"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.012",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    4.47,
+    4.47,
+    4.47
+   ],
+   "loc": [
+    0.2276,
+    -1.0408,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 482,
+   "polys": 512,
+   "mats": [
+    "Brown"
+   ],
+   "modifiers": []
+  }
+ ],
+ "materials": {
+  "BlueGlow.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.252,
+      0.4833,
+      0.6495,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#89B9D3"
+  },
+  "BlueMat.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.1651,
+      0.2143,
+      0.371,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.3,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#7180A4"
+  },
+  "Brown": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.1542,
+      0.0798,
+      0.0387,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.191,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#6D5037"
+  },
+  "BrownPLANE": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.01,
+      0.0055,
+      0.0,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.191,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#191100"
+  },
+  "Coffe.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.3882,
+      0.2758,
+      0.1851,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#A78F77"
+  },
+  "Dots Stroke": {
+   "use_nodes": false,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [],
+   "hex": "#E7E7E7"
+  },
+  "Gray.002": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.1055,
+      0.1055,
+      0.1125,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#5B5B5E"
+  },
+  "Green.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.2364,
+      0.5171,
+      0.3968,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.082,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#85BEA9"
+  },
+  "Light Coffe.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.7143,
+      0.5854,
+      0.3686,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#DCC9A3"
+  },
+  "Orange.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.7386,
+      0.2147,
+      0.1424,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#DF8069"
+  },
+  "Pink": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.6885,
+      0.2695,
+      0.2695,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#D88E8E"
+  },
+  "White.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.65,
+      0.65,
+      0.65,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.082,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#D3D3D3"
+  },
+  "Yellow.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.7173,
+      0.6438,
+      0.0938,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#DCD256"
+  }
+ },
+ "collections": [
+  "Collection",
+  "SaltShaker"
+ ],
+ "images": [
+  "NormalMap (1).png",
+  "interior.exr.001",
+  "pink-marble-textured-background.jpg"
+ ],
+ "rel": "Single Products\\Salad Bowl.blend",
+ "slug": "single-products-salad-bowl"
+}

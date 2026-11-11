@@ -1,0 +1,90 @@
+{
+ "slug": "single-products-salt-shaker",
+ "source": "Single Products\\Salt Shaker.blend",
+ "glb": "single-products-salt-shaker.glb",
+ "bytes": 500276,
+ "polys": 12494,
+ "objects": [
+  "Salt Shaker 0"
+ ],
+ "size_m": [
+  0.0427,
+  0.0427,
+  0.0552
+ ],
+ "bbox_min": [
+  0.15174923837184906,
+  0.012392591685056686,
+  0.007288907188922167
+ ],
+ "bbox_max": [
+  0.1944403499364853,
+  0.05508369952440262,
+  0.06248769536614418
+ ],
+ "materials": {
+  "White": {
+   "hex": "#D3D3D3",
+   "roughness": 0.05,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Cylinder",
+   "hidden"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ]
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "slug": "single-products-cup",
+ "source": "Single Products\\Cup.blend",
+ "glb": "single-products-cup.glb",
+ "bytes": 1975660,
+ "polys": 109998,
+ "objects": [
+  "CUP",
+  "NAALBAKI"
+ ],
+ "size_m": [
+  0.141,
+  0.1423,
+  0.0649
+ ],
+ "bbox_min": [
+  -0.03866838663816452,
+  -0.02209494262933731,
+  0.003127678297460079
+ ],
+ "bbox_max": [
+  0.10235752910375595,
+  0.12022766470909119,
+  0.06802910566329956
+ ],
+ "materials": {
+  "Gray": {
+   "hex": "#5B5B5E",
+   "roughness": 0.14,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#D88E8E",
+   "roughness": 0.18,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Plane",
+   "backdrop"
+  ],
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ]
+ ]
+}

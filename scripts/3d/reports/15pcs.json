@@ -1,0 +1,615 @@
+{
+ "file": "C:\\Users\\Alireza Ezlegini\\Desktop\\_Apps\\nour\\3D\\15PCS.blend",
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "BezierCurve",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    18.84,
+    15.77,
+    2.73
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.001",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    18.75,
+    1.29,
+    1.13
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.002",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    16.84,
+    2.13,
+    0.32
+   ],
+   "loc": [
+    0.0,
+    0.04,
+    0.03
+   ],
+   "hide_render": true,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.003",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    16.85,
+    2.12,
+    8.32
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.004",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    18.75,
+    1.29,
+    1.13
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.005",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    18.75,
+    1.29,
+    1.13
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "BezierCurve.006",
+   "type": "CURVE",
+   "parent": null,
+   "dim_cm": [
+    18.75,
+    1.29,
+    1.13
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "CUP.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    8.04,
+    6.14
+   ],
+   "loc": [
+    0.0357,
+    -0.0734,
+    0.1227
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1895,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "CUP.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    8.04,
+    6.14
+   ],
+   "loc": [
+    -0.005,
+    0.0035,
+    0.0001
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1895,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "CUP.003",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    20.66,
+    6.14
+   ],
+   "loc": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1896,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "CUP.004",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    20.66,
+    6.14
+   ],
+   "loc": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1896,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "CUP.005",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    8.04,
+    6.14
+   ],
+   "loc": [
+    0.0803,
+    -0.0147,
+    0.1227
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1895,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "CUP.006",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.6,
+    20.66,
+    6.14
+   ],
+   "loc": [
+    0.061,
+    0.0598,
+    0.1233
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1896,
+   "polys": 1834,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    21.24,
+    14.02,
+    8.92
+   ],
+   "loc": [
+    -0.0006,
+    -0.0007,
+    0.2252
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 406,
+   "polys": 368,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "NAALBAKI",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    14.11,
+    14.11,
+    4.34
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0314
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 256,
+   "polys": 225,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF",
+    "ARRAY"
+   ]
+  },
+  {
+   "name": "Sphere.014",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    13.96,
+    14.12,
+    1.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Color Guides"
+   ],
+   "verts": 964,
+   "polys": 1024,
+   "mats": [],
+   "modifiers": [
+    "SUBSURF",
+    "MIRROR"
+   ]
+  },
+  {
+   "name": "Sphere.015",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    7.09,
+    7.09,
+    2.75
+   ],
+   "loc": [
+    -0.0006,
+    -0.0007,
+    0.2758
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 609,
+   "polys": 609,
+   "mats": [
+    "White"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Torus",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    10.26,
+    10.26,
+    0.29
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.033
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 576,
+   "polys": 576,
+   "mats": [
+    "Gold"
+   ],
+   "modifiers": [
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Torus.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    18.73,
+    18.73,
+    0.29
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0112
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 576,
+   "polys": 576,
+   "mats": [],
+   "modifiers": [
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Torus.003",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    11.75,
+    11.75,
+    0.29
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.187
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 576,
+   "polys": 576,
+   "mats": [
+    "Gold"
+   ],
+   "modifiers": [
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Torus.006",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    13.55,
+    13.55,
+    0.29
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.1873
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 576,
+   "polys": 576,
+   "mats": [
+    "Gold"
+   ],
+   "modifiers": [
+    "SUBSURF"
+   ]
+  }
+ ],
+ "materials": {
+  "Dots Stroke": {
+   "use_nodes": false,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [],
+   "hex": "#E7E7E7"
+  },
+  "Gold": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      1.0,
+      0.7945,
+      0.1741,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 1.0,
+     "roughness": 0.1,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#FFE674"
+  },
+  "White": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.5,
+      0.5,
+      0.5,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.082,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#BCBCBC"
+  }
+ },
+ "collections": [
+  "Color Guides"
+ ],
+ "images": [
+  "NormalMap (1).png",
+  "interior.exr.001",
+  "leather-sofa-wooden-table-living-room-interior-with-plant-concr"
+ ],
+ "rel": "15PCS.blend",
+ "slug": "15pcs"
+}

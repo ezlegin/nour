@@ -1,0 +1,19 @@
+{
+  "name": "چینی نور | Nour Porcelain",
+  "short_name": "نور",
+  "description": "پرسلین دست‌ساز ایرانی در هشت لعاب آرام و لبه‌های طلا.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#1d1b17",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

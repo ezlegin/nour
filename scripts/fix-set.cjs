@@ -1,0 +1,10 @@
+const fs = require("fs");
+const p = "components/home/SetStory.tsx";
+let t = fs.readFileSync(p, "utf8");
+t = t.replace("camera={[0, 1.75, 5.4]}", "camera={[0, 1.35, 6.1]}");
+t = t.replace("                  fov={30}", "                  fov={28}");
+t = t.replace("    handle.group.rotation.y = Math.sin(state.clock.elapsedTime * 0.12) * 0.08 + eased * 0.42;", "    handle.group.rotation.y = 0;");
+t = t.replace("از قوری تا نمک‌دان؛ همه در یک زبان رنگی و یک اندازه‌ی دست.", "از قوری تا نمک‌دان؛ همه در یک زبان رنگی و یک اندازه‌ی استاندارد.");
+t = t.replace("رنگ‌ها آزادانه قابل ترکیب‌اند؛ هر سرویس با هشت لعاب ساخته\n                می‌شود.", "رنگ‌ها آزادانه قابل ترکیب‌اند؛ هر سرویس با هشت لعاب ساخته می‌شود.");
+fs.writeFileSync(p, t);
+console.log(t.includes("6.1"), t.includes("rotation.y = 0"), t.includes("استاندارد"));

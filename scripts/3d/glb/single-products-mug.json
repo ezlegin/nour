@@ -1,0 +1,98 @@
+{
+ "slug": "single-products-mug",
+ "source": "Single Products\\Mug.blend",
+ "glb": "single-products-mug.glb",
+ "bytes": 492764,
+ "polys": 13648,
+ "objects": [
+  "Circle.002"
+ ],
+ "size_m": [
+  0.0998,
+  0.1222,
+  0.1053
+ ],
+ "bbox_min": [
+  -0.05924426019191742,
+  -0.05568931996822357,
+  0.00012777766096405685
+ ],
+ "bbox_max": [
+  0.040508441627025604,
+  0.06653481721878052,
+  0.10544741898775101
+ ],
+ "materials": {
+  "BlueMat": {
+   "hex": "#7180A4",
+   "roughness": 0.3,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Plane",
+   "backdrop"
+  ],
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Cylinder",
+   "hidden"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ]
+ ]
+}

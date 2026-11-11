@@ -1,56 +1,51 @@
 import { Toaster } from "@/components/ui/sonner";
-import { getLang } from "@/lib/getLang";
+import SmoothScroll from "@/components/site/SmoothScroll";
 import "./globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const savedLang = await getLang();
-
   return (
-    <html
-      lang={savedLang === "FA" ? "fa" : "en"}
-      dir={savedLang === "FA" ? "rtl" : "ltr"}
-    >
-      <body className="dark">
+    <html lang="fa" dir="rtl">
+      <body className="min-h-screen antialiased">
         {children}
-        <Toaster position="top-right" richColors />
+        <SmoothScroll />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chininour.com"),
   title: {
-    default: "Nour Porcelain",
-    template: "%s | Nour Porcelain",
+    default: "چینی نور | کارخانه پرسلین غذاخوری در زنجان",
+    template: "%s | چینی نور",
   },
-  description: "Nour Porcelain",
+  description:
+    "کارخانه چینی نور در زنجان: تولید پرسلین غذاخوری در هشت رنگ لعاب — بشقاب گرد و تخت، کاسه، ماگ و سرویس‌های کامل.",
   icons: {
     icon: "/favicon.svg",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Nour Porcelain",
-    description: "Nour Porcelain",
+    title: "چینی نور",
+    description: "پرسلین غذاخوری، ساخته‌شده در زنجان.",
     url: "https://chininour.com",
-    siteName: "Nour Porcelain",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Nour Porcelain",
-      },
-    ],
-    locale: "en_US",
+    siteName: "چینی نور",
+    images: [{ url: "/products/dish.png", width: 1200, height: 1200, alt: "چینی نور" }],
+    locale: "fa_IR",
     type: "website",
   },
   manifest: "/site.webmanifest",
-  themeColor: "#ffffff",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f4f4f3",
 };

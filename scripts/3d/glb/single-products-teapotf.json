@@ -1,0 +1,39 @@
+{
+ "slug": "single-products-teapotf",
+ "source": "Single Products\\TeapotF.blend",
+ "glb": "single-products-teapotf.glb",
+ "bytes": 1158856,
+ "polys": 32128,
+ "objects": [
+  "Cylinder.001",
+  "Sphere.013"
+ ],
+ "size_m": [
+  0.2147,
+  0.1415,
+  0.1044
+ ],
+ "bbox_min": [
+  -0.10126573592424393,
+  -0.07074674218893051,
+  -0.024958230555057526
+ ],
+ "bbox_max": [
+  0.11344833672046661,
+  0.07074672728776932,
+  0.07948584854602814
+ ],
+ "materials": {
+  "Material.001": {
+   "hex": "#BB954B",
+   "roughness": 0.2,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ]
+ ]
+}

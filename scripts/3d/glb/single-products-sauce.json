@@ -1,0 +1,98 @@
+{
+ "slug": "single-products-sauce",
+ "source": "Single Products\\sauce.blend",
+ "glb": "single-products-sauce.glb",
+ "bytes": 654916,
+ "polys": 18176,
+ "objects": [
+  "Cylinder.007"
+ ],
+ "size_m": [
+  0.1248,
+  0.1522,
+  0.0899
+ ],
+ "bbox_min": [
+  -0.042502135038375854,
+  -0.02902926132082939,
+  -0.004998589865863323
+ ],
+ "bbox_max": [
+  0.0822749063372612,
+  0.1231369599699974,
+  0.0849238857626915
+ ],
+ "materials": {
+  "White": {
+   "hex": "#D3D3D3",
+   "roughness": 0.082,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Cylinder",
+   "hidden"
+  ],
+  [
+   "Plane.002",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ]
+ ]
+}

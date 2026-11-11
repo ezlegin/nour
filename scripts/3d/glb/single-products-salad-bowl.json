@@ -1,0 +1,98 @@
+{
+ "slug": "single-products-salad-bowl",
+ "source": "Single Products\\Salad Bowl.blend",
+ "glb": "single-products-salad-bowl.glb",
+ "bytes": 250024,
+ "polys": 6912,
+ "objects": [
+  "Circle"
+ ],
+ "size_m": [
+  0.235,
+  0.235,
+  0.0714
+ ],
+ "bbox_min": [
+  -0.11748430877923965,
+  -0.11748432368040085,
+  0.0
+ ],
+ "bbox_max": [
+  0.11748430877923965,
+  0.11748430877923965,
+  0.07136014848947525
+ ],
+ "materials": {
+  "White.001": {
+   "hex": "#D3D3D3",
+   "roughness": 0.082,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ]
+ ]
+}

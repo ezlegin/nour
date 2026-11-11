@@ -1,0 +1,100 @@
+{
+ "slug": "single-products-dis-30-1",
+ "source": "Single Products\\Dis 30 (1).blend",
+ "glb": "single-products-dis-30-1.glb",
+ "bytes": 497524,
+ "polys": 17664,
+ "objects": [
+  "Circle.006",
+  "Circle.001",
+  "Circle.002"
+ ],
+ "size_m": [
+  0.1803,
+  0.4343,
+  0.302
+ ],
+ "bbox_min": [
+  -0.17663069069385529,
+  -0.1341649293899536,
+  -0.006026155781000853
+ ],
+ "bbox_max": [
+  0.0036792755126953125,
+  0.30014029145240784,
+  0.295952171087265
+ ],
+ "materials": {
+  "White.001": {
+   "hex": "#D3D3D3",
+   "roughness": 0.082,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ]
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "slug": "single-products-mast-14",
+ "source": "Single Products\\Mast 14.blend",
+ "glb": "single-products-mast-14.glb",
+ "bytes": 1019824,
+ "polys": 33280,
+ "objects": [
+  "Circle.001",
+  "Circle.002",
+  "Circle.003",
+  "Circle.004",
+  "Circle.005",
+  "Circle.006"
+ ],
+ "size_m": [
+  0.135,
+  0.135,
+  0.087
+ ],
+ "bbox_min": [
+  -0.0674973577260971,
+  -0.0674973577260971,
+  -0.00044238270493224263
+ ],
+ "bbox_max": [
+  0.0674973577260971,
+  0.0674973577260971,
+  0.08654197305440903
+ ],
+ "materials": {
+  "BrownPLANE": {
+   "hex": "#191100",
+   "roughness": 0.191,
+   "metallic": 0.0
+  },
+  "Coffe.001": {
+   "hex": "#A78F77",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Gray.002": {
+   "hex": "#757579",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Light Coffe.001": {
+   "hex": "#DCC9A3",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "White.001": {
+   "hex": "#D3D3D3",
+   "roughness": 0.082,
+   "metallic": 0.0
+  },
+  "Yellow.001": {
+   "hex": "#DCD256",
+   "roughness": 0.18,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ]
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "slug": "gold-edge-set",
+ "source": "Gold Edge Set.blend",
+ "glb": "gold-edge-set.glb",
+ "bytes": 1204080,
+ "polys": 33280,
+ "objects": [
+  "Circle.002",
+  "Circle.003",
+  "Circle.004",
+  "Circle",
+  "Circle.005",
+  "Circle.006"
+ ],
+ "size_m": [
+  0.5105,
+  0.6292,
+  0.302
+ ],
+ "bbox_min": [
+  -0.2538915276527405,
+  -0.2643665373325348,
+  -0.006026140879839659
+ ],
+ "bbox_max": [
+  0.25662440061569214,
+  0.3648437559604645,
+  0.2959521412849426
+ ],
+ "materials": {
+  "Gold_blue": {
+   "hex": "#89B9D3",
+   "roughness": 0.03,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Area.001",
+   "light"
+  ],
+  [
+   "Area.002",
+   "light"
+  ],
+  [
+   "Sun",
+   "light"
+  ],
+  [
+   "Sphere",
+   "hidden"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ],
+  [
+   "Sphere.013",
+   "swatch"
+  ],
+  [
+   "Sphere.014",
+   "swatch"
+  ],
+  [
+   "Sphere.015",
+   "swatch"
+  ],
+  [
+   "Sphere.016",
+   "swatch"
+  ],
+  [
+   "Sphere.017",
+   "swatch"
+  ],
+  [
+   "Sphere.018",
+   "swatch"
+  ],
+  [
+   "Sphere.019",
+   "swatch"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ]
+ ]
+}

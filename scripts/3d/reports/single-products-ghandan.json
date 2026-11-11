@@ -1,0 +1,187 @@
+{
+ "file": "C:\\Users\\Alireza Ezlegini\\Desktop\\_Apps\\nour\\3D\\Single Products\\Ghandan.blend",
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "Camera",
+   "type": "CAMERA",
+   "parent": null,
+   "dim_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0039,
+    -0.2718,
+    0.1025
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ]
+  },
+  {
+   "name": "Circle",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    11.32,
+    11.32,
+    4.96
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 352,
+   "polys": 321,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Cylinder.002",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    13.91,
+    1.99,
+    13.91
+   ],
+   "loc": [
+    0.0662,
+    0.0397,
+    0.0409
+   ],
+   "hide_render": true,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1664,
+   "polys": 944,
+   "mats": [],
+   "modifiers": []
+  },
+  {
+   "name": "Sphere.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    8.17,
+    8.17,
+    2.73
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0602
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 609,
+   "polys": 609,
+   "mats": [],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Sphere.015",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    7.09,
+    7.09,
+    2.75
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.4427
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 609,
+   "polys": 609,
+   "mats": [
+    "Pink"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  }
+ ],
+ "materials": {
+  "Dots Stroke": {
+   "use_nodes": false,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [],
+   "hex": "#E7E7E7"
+  },
+  "Pink": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.6885,
+      0.2695,
+      0.2695,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#D88E8E"
+  }
+ },
+ "collections": [
+  "Collection",
+  "SaltShaker"
+ ],
+ "images": [
+  "NormalMap (1).png",
+  "interior.exr.001",
+  "leather-sofa-wooden-table-living-room-interior-with-plant-concr"
+ ],
+ "rel": "Single Products\\Ghandan.blend",
+ "slug": "single-products-ghandan"
+}

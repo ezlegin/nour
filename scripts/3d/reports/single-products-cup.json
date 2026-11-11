@@ -1,0 +1,255 @@
+{
+ "file": "C:\\Users\\Alireza Ezlegini\\Desktop\\_Apps\\nour\\3D\\Single Products\\Cup.blend",
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "Camera",
+   "type": "CAMERA",
+   "parent": null,
+   "dim_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.3064,
+    0.0217,
+    0.1618
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ]
+  },
+  {
+   "name": "CUP",
+   "type": "MESH",
+   "parent": "NAALBAKI",
+   "dim_cm": [
+    10.6,
+    8.04,
+    6.14
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.035
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 1895,
+   "polys": 1834,
+   "mats": [
+    "Pink"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "NAALBAKI",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    14.11,
+    14.11,
+    2.17
+   ],
+   "loc": [
+    0.0318,
+    0.0484,
+    0.0039
+   ],
+   "hide_render": false,
+   "collections": [
+    "Scene Collection"
+   ],
+   "verts": 256,
+   "polys": 225,
+   "mats": [
+    "Gray"
+   ],
+   "modifiers": [
+    "SOLIDIFY",
+    "SUBSURF"
+   ]
+  },
+  {
+   "name": "Plane",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    659.2,
+    659.2,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ],
+   "verts": 4,
+   "polys": 1,
+   "mats": [
+    "Material.001"
+   ],
+   "modifiers": []
+  },
+  {
+   "name": "Plane.001",
+   "type": "MESH",
+   "parent": null,
+   "dim_cm": [
+    659.2,
+    659.2,
+    0.0
+   ],
+   "loc": [
+    -0.8889,
+    3.0889,
+    4.5555
+   ],
+   "hide_render": false,
+   "collections": [
+    "Collection"
+   ],
+   "verts": 4,
+   "polys": 1,
+   "mats": [
+    "Material.001"
+   ],
+   "modifiers": []
+  }
+ ],
+ "materials": {
+  "Dots Stroke": {
+   "use_nodes": false,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [],
+   "hex": "#E7E7E7"
+  },
+  "Gray": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.1055,
+      0.1055,
+      0.1125,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.14,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#5B5B5E"
+  },
+  "Material.001": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.082,
+     "roughness_linked": false,
+     "coat": 0.0
+    },
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    }
+   ],
+   "hex": "#FFFFFF"
+  },
+  "Pink": {
+   "use_nodes": true,
+   "diffuse": [
+    0.8,
+    0.8,
+    0.8,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "nodes": [
+    {
+     "type": "OUTPUT_MATERIAL",
+     "name": "Material Output"
+    },
+    {
+     "type": "BSDF_PRINCIPLED",
+     "name": "Principled BSDF",
+     "base_color": [
+      0.6885,
+      0.2695,
+      0.2695,
+      1.0
+     ],
+     "base_linked": false,
+     "metallic": 0.0,
+     "roughness": 0.18,
+     "roughness_linked": false,
+     "coat": 0.0
+    }
+   ],
+   "hex": "#D88E8E"
+  }
+ },
+ "collections": [
+  "Collection"
+ ],
+ "images": [
+  "NormalMap (1).png",
+  "interior.exr.001",
+  "leather-sofa-wooden-table-living-room-interior-with-plant-concr"
+ ],
+ "rel": "Single Products\\Cup.blend",
+ "slug": "single-products-cup"
+}

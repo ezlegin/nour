@@ -1,0 +1,17 @@
+const fs = require("fs");
+const path = "components/home/GlazeStudio.tsx";
+let t = fs.readFileSync(path, "utf8");
+t = t.replace('import { formatPrice } from "@/lib/shop";\n', "");
+t = t.replace("  price: number;\n", "");
+t = t.replace(/\n    price: \d+,/g, "");
+t = t.replace(/href: "\/products\/[^"]+",/g, (m) => m);
+t = t.replace('href: "/products/noor-classic-plate-26"', 'href: "/products/tea-set-15"');
+t = t.replace('href: "/products/noor-classic-plate-26"', 'href: "/products/round-plate-26"');
+t = t.replace('href: "/products/terra-pasta-bowl-22"', 'href: "/products/salad-bowl-20"');
+t = t.replace('href: "/products/cloud-mug-350"', 'href: "/products/mug-350"');
+t = t.replace('href: "/products/saffron-tea-set-12"', 'href: "/products/teapot-800"');
+t = t.replace(/\n              <p className="text-\[0\.85rem\] text-brand-gold">\n                \{formatPrice\(piece\.price, "FA"\)\}\n              <\/p>/g, "");
+t = t.replace("مشاهده محصول", "مشاهده محصول");
+fs.writeFileSync(path, t);
+console.log("price left:", (t.match(/formatPrice|price:/g) || []).length);
+console.log((t.match(/href: "\/products\/[^"]+"/g) || []).join("\n"));

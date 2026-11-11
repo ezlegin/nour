@@ -1,0 +1,116 @@
+{
+ "slug": "single-products-bowl",
+ "source": "Single Products\\Bowl.blend",
+ "glb": "single-products-bowl.glb",
+ "bytes": 1303996,
+ "polys": 48128,
+ "objects": [
+  "Circle",
+  "Circle.001",
+  "Circle.002",
+  "Circle.003"
+ ],
+ "size_m": [
+  0.1559,
+  0.1994,
+  0.1508
+ ],
+ "bbox_min": [
+  -0.0797562226653099,
+  -0.09572988003492355,
+  -0.007991277612745762
+ ],
+ "bbox_max": [
+  0.07614931464195251,
+  0.10364935547113419,
+  0.14280414581298828
+ ],
+ "materials": {
+  "BlueMat": {
+   "hex": "#7180A4",
+   "roughness": 0.3,
+   "metallic": 0.0
+  },
+  "Coffe": {
+   "hex": "#988871",
+   "roughness": 0.082,
+   "metallic": 0.0
+  },
+  "Gray": {
+   "hex": "#5B5B5E",
+   "roughness": 0.14,
+   "metallic": 0.0
+  },
+  "Pink": {
+   "hex": "#D88E8E",
+   "roughness": 0.18,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Plane.001",
+   "backdrop"
+  ],
+  [
+   "Plane.003",
+   "backdrop"
+  ],
+  [
+   "Plane.002",
+   "backdrop"
+  ],
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ]
+ ]
+}

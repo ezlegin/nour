@@ -1,0 +1,33 @@
+{
+ "slug": "creamer",
+ "source": "Creamer.blend",
+ "glb": "creamer.glb",
+ "bytes": 654820,
+ "polys": 18176,
+ "objects": [
+  "Cylinder.007"
+ ],
+ "size_m": [
+  0.1022,
+  0.1445,
+  0.0899
+ ],
+ "bbox_min": [
+  -0.05231519043445587,
+  -0.06558794528245926,
+  -0.04554582014679909
+ ],
+ "bbox_max": [
+  0.04985656961798668,
+  0.07886524498462677,
+  0.04437664523720741
+ ],
+ "materials": {
+  "Glaze": {
+   "hex": "#C4BCB3",
+   "roughness": 0.15,
+   "metallic": 0.0
+  }
+ },
+ "dropped": []
+}

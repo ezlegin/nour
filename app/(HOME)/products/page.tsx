@@ -1,37 +1,46 @@
-import { getLang } from "@/lib/getLang";
-import ProductsGrid from "./components/ProductsGrid";
-import PageTitle from "@/components/PageTitle";
+import { Suspense } from "react";
+import ProductGrid from "@/components/shop/ProductGrid";
+import ProductsBrowser from "@/components/shop/ProductsBrowser";
+import SectionHeading from "@/components/shop/SectionHeading";
+import { catalogue } from "@/data/showcase";
 
-const ProductsPage = async () => {
-  const faLang = (await getLang()) === "FA";
-  const lang = await getLang();
-
-  return (
-    <div className="space-y-8">
-      <PageTitle lang={lang} titleEn="Our Products" titleFa="محصولات ما" />
-
-      <p className="text-center text-muted-foreground">
-        {faLang
-          ? "مجموعه‌ای از ظروف پرسلین شیک و رنگارنگ ما را کشف کنید."
-          : "Discover our collection of elegant and colorful porcelain dinnerware."}{" "}
-        <br />
-        {faLang
-          ? "از ظروف ساده‌ی روزمره تا سرویس‌های رنگارنگ پذیرایی، هر قطعه با طراحی‌ای ساده و ماندگار ساخته شده تا تجربه‌ای خاص از صرف غذا برایتان رقم بزند."
-          : `From minimal everyday dishes to vibrant table sets, each piece is
-        designed to elevate your dining experience with timeless simplicity.`}
-      </p>
-
-      <div className="flex justify-center items-center">
-        <ProductsGrid />
-      </div>
-    </div>
-  );
-};
-
-export default ProductsPage;
+export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Products",
+  title: "محصولات",
   description:
-    "Explore our collection of elegant and colorful porcelain dinnerware, designed to enhance your dining experience with timeless simplicity.",
+    "بشقاب گرد و تخت، کاسه، ماگ، قوری و سرویس‌های کامل — پرسلین نور در هشت رنگ لعاب.",
 };
+
+const CHIPS = [
+  { slug: "", name_fa: "همه" },
+  { slug: "plates-round", name_fa: "بشقاب گرد" },
+  { slug: "plates-flat", name_fa: "بشقاب تخت" },
+  { slug: "bowls", name_fa: "کاسه" },
+  { slug: "mugs-jugs", name_fa: "ماگ و قوری" },
+  { slug: "serving", name_fa: "سرو و چاشنی" },
+  { slug: "dinner-sets", name_fa: "سرویس" },
+];
+
+export default function ProductsPage() {
+  return (
+    <div className="shell py-12 lg:py-16">
+      <SectionHeading
+        index="۰۱"
+        eyebrow="محصولات"
+        title={
+          <>
+            همه‌ی قطعه‌ها،
+            <br />
+            در هشت لعاب.
+          </>
+        }
+        description="هر قطعه در چند رنگ تولید می‌شود؛ رنگ را در صفحه‌ی محصول روی مدل سه‌بعدی امتحان کنید."
+      />
+
+      <Suspense fallback={<ProductGrid products={catalogue} className="mt-10" />}>
+        <ProductsBrowser products={catalogue} chips={CHIPS} />
+      </Suspense>
+    </div>
+  );
+}

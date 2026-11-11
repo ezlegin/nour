@@ -42,4 +42,20 @@ next-env.d.ts
 
 # prisma
 /prisma/generated
-/prisma/migrations
+.pgdata
+.npm-cache
+# 3D source scenes (large .blend files, kept locally)
+/3D/
+/.blender/
+/.npm-cache/
+
+# local QA artifacts
+/.dev.log
+/.build.log
+/.start.log
+/scripts/3d/previews/
+/scripts/shots/
+
+# local working files: model backups and the original photo (web copies live in public/)
+/models-backup/
+/company.jpg

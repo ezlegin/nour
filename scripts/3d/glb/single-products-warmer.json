@@ -1,0 +1,97 @@
+{
+ "slug": "single-products-warmer",
+ "source": "Single Products\\Warmer.blend",
+ "glb": "single-products-warmer.glb",
+ "bytes": 1765452,
+ "polys": 48016,
+ "objects": [
+  "Cylinder.001",
+  "Sphere.013",
+  "Circle.001"
+ ],
+ "size_m": [
+  0.2159,
+  0.1415,
+  0.165
+ ],
+ "bbox_min": [
+  -0.10126573592424393,
+  -0.07074674218893051,
+  0.0
+ ],
+ "bbox_max": [
+  0.11459783464670181,
+  0.07074672728776932,
+  0.16503958404064178
+ ],
+ "materials": {
+  "Gray.002": {
+   "hex": "#757579",
+   "roughness": 0.18,
+   "metallic": 0.0
+  },
+  "Material.001": {
+   "hex": "#BB954B",
+   "roughness": 0.2,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Sphere",
+   "swatch"
+  ],
+  [
+   "Sphere.001",
+   "swatch"
+  ],
+  [
+   "Sphere.002",
+   "swatch"
+  ],
+  [
+   "Sphere.003",
+   "swatch"
+  ],
+  [
+   "Sphere.004",
+   "swatch"
+  ],
+  [
+   "Sphere.005",
+   "swatch"
+  ],
+  [
+   "Sphere.006",
+   "swatch"
+  ],
+  [
+   "Sphere.007",
+   "swatch"
+  ],
+  [
+   "Sphere.008",
+   "swatch"
+  ],
+  [
+   "Sphere.009",
+   "swatch"
+  ],
+  [
+   "Sphere.010",
+   "swatch"
+  ],
+  [
+   "Sphere.011",
+   "swatch"
+  ],
+  [
+   "Sphere.012",
+   "swatch"
+  ],
+  [
+   "Cylinder.007",
+   "hidden"
+  ]
+ ]
+}

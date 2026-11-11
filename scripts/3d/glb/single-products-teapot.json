@@ -1,0 +1,43 @@
+{
+ "slug": "single-products-teapot",
+ "source": "Single Products\\TEapot.blend",
+ "glb": "single-products-teapot.glb",
+ "bytes": 1306476,
+ "polys": 36224,
+ "objects": [
+  "Cylinder.001",
+  "Sphere.001"
+ ],
+ "size_m": [
+  0.2159,
+  0.1415,
+  0.1005
+ ],
+ "bbox_min": [
+  -0.10126573592424393,
+  -0.07074674218893051,
+  -0.024958230555057526
+ ],
+ "bbox_max": [
+  0.11459783464670181,
+  0.07074672728776932,
+  0.07553757727146149
+ ],
+ "materials": {
+  "Material.001": {
+   "hex": "#BB954B",
+   "roughness": 0.2,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Camera",
+   "camera"
+  ],
+  [
+   "Sun",
+   "light"
+  ]
+ ]
+}

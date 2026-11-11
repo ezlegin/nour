@@ -1,0 +1,70 @@
+{
+ "slug": "15pcs",
+ "source": "15PCS.blend",
+ "glb": "15pcs.glb",
+ "bytes": 1772408,
+ "polys": 109987,
+ "objects": [
+  "Sphere.015",
+  "Torus",
+  "CUP.002",
+  "CUP.001",
+  "CUP.005",
+  "Torus.003",
+  "Torus.006",
+  "NAALBAKI",
+  "BezierCurve.003",
+  "Torus.002",
+  "BezierCurve.001",
+  "BezierCurve.004",
+  "BezierCurve.005",
+  "BezierCurve.006",
+  "BezierCurve",
+  "CUP.003",
+  "CUP.004",
+  "CUP.006",
+  "Cylinder.002"
+ ],
+ "size_m": [
+  0.2756,
+  0.3563,
+  0.2796
+ ],
+ "bbox_min": [
+  -0.12064498662948608,
+  -0.12411532551050186,
+  0.00971310120075941
+ ],
+ "bbox_max": [
+  0.15495650470256805,
+  0.23223327100276947,
+  0.28931066393852234
+ ],
+ "materials": {
+  "Glaze": {
+   "hex": "#C4BCB3",
+   "roughness": 0.15,
+   "metallic": 0.0
+  },
+  "Gold": {
+   "hex": "#FFE674",
+   "roughness": 0.1,
+   "metallic": 1.0
+  },
+  "White": {
+   "hex": "#BCBCBC",
+   "roughness": 0.082,
+   "metallic": 0.0
+  }
+ },
+ "dropped": [
+  [
+   "Sphere.014",
+   "swatch"
+  ],
+  [
+   "BezierCurve.002",
+   "hidden"
+  ]
+ ]
+}

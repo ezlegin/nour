@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import SiteFooter from "@/components/site/SiteFooter";
+import SiteHeader from "@/components/site/SiteHeader";
 
 export default function RootLayout({
   children,
@@ -7,12 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div
-      className={`antialiased max-w-screen-2xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen px-4`}
-    >
-      <NavBar />
-      <div className="my-16">{children}</div>
-      <Footer />
+    <div className="flex min-h-screen flex-col bg-brand-paper">
+      <SiteHeader />
+      <main className="flex-1">{children}</main>
+      <SiteFooter />
     </div>
   );
 }
