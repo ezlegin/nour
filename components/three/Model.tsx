@@ -263,6 +263,8 @@ export default function Model({
     if (root.current && float) {
       root.current.position.y = Math.sin(state.clock.elapsedTime * 0.6) * 0.008;
     }
+    // the Stage renders on demand: keep asking while the piece is moving
+    if (spin || sway || float || parallax) state.invalidate();
   });
 
   return (

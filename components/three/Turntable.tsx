@@ -105,8 +105,9 @@ export default function Turntable({
 
     orbit.current = { centre, distance };
     camera.position.set(0, centre + Math.sin(tilt) * distance, Math.cos(tilt) * distance);
-    camera.near = Math.max(0.05, distance - sphere * 2);
-    camera.far = distance + sphere * 6;
+    // generous clip planes: the measured extent can undershoot the drawn piece
+    camera.near = 0.01;
+    camera.far = distance * 4 + sphere * 20;
     camera.lookAt(0, centre, 0);
     camera.updateProjectionMatrix();
     invalidate();
@@ -121,6 +122,7 @@ export default function Turntable({
     );
     camera.position.set(0, centre + Math.sin(tilt) * distance, Math.cos(tilt) * distance);
     camera.lookAt(0, centre, 0);
+    state.invalidate();
   });
 
   return (

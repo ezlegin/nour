@@ -33,13 +33,13 @@ export default function Stage({
   className,
   camera = [0, 1.1, 3.4],
   fov = 30,
-  shadows = true,
+  shadows = false,
   orbit = false,
   zoom = false,
   autoRotate = false,
   autoRotateSpeed = 0.6,
   limited = true,
-  dpr = [1, 1.8],
+  dpr = [1, 1.25],
   margin = 1.4,
   frame = true,
   ariaLabel = "نمای سه‌بعدی محصول",
@@ -54,11 +54,12 @@ export default function Stage({
         gl={{
           antialias: true,
           alpha: true,
-          powerPreference: "high-performance",
+          powerPreference: "default",
           preserveDrawingBuffer: preserve,
         }}
         shadows
-        frameloop={paused ? "never" : "always"}
+        // draws only when something asks for a frame (motion, controls, loads)
+        frameloop={paused ? "never" : "demand"}
         onCreated={({ gl }) => {
           // Neutral keeps glaze hues true. AgX (closest to Blender's Filmic)
           // skews saturated reds and pinks towards orange.
